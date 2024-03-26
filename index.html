@@ -54,51 +54,51 @@
       <!-- Pista 1-->
       <div class="pista">
         <div class="box-img">
-          <img src="imagens/grey-car.gif" alt="Pink car" />
+          <img src="imagens/grey-car.gif" alt="Grey car" id="player1" />
         </div>
         <div class="box-info">
           <div class="box">
-            <input type="text" name="" id="" placeholder="0" />
+            <input type="text" name="" id="txtbet1" value="" placeholder="0" />
           </div>
-          <div class="box"><span>0/100</span></div>
-          <div class="box"><span>0</span></div>
+          <div class="box"><span id="metros1">0/100</span></div>
+          <div class="box"><span id="vitory1">0</span></div>
         </div>
       </div>
       <!-- Pista 2-->
       <div class="pista">
         <div class="box-img">
-          <img src="imagens/red3-car.gif" alt="Pink car" />
+          <img src="imagens/red3-car.gif" alt="Red car" id="player2" />
         </div>
         <div class="box-info">
           <div class="box">
-            <input type="text" name="" id="" placeholder="0" />
+            <input type="text" name="" id="txtbet2" value="" placeholder="0" />
           </div>
-          <div class="box"><span>0/100</span></div>
-          <div class="box"><span>0</span></div>
+          <div class="box"><span id="metros2">0/100</span></div>
+          <div class="box"><span id="vitory2">0</span></div>
         </div>
       </div>
       <!-- Pista 3-->
       <div class="pista">
         <div class="box-img">
-          <img src="imagens/mota.gif" alt="Pink car" />
+          <img src="imagens/mota.gif" alt="Red mota" id="player3" />
         </div>
         <div class="box-info">
           <div class="box">
-            <input type="text" name="" id="" placeholder="0" />
+            <input type="text" name="" id="txtbet3" value="" placeholder="0" />
           </div>
-          <div class="box"><span>0/100</span></div>
-          <div class="box"><span>0</span></div>
+          <div class="box"><span id="metros3">0/100</span></div>
+          <div class="box"><span id="vitory3">0</span></div>
         </div>
       </div>
     </section>
 
     <div class="active-race">
       <div class="box-btn">
-        <input type="button" value="Start Race..." />
+        <input type="button" value="Start Race..." onclick="startRace()" />
       </div>
       <div class="box-active">
         <h3 class="box-title"><span>Créditos</span></h3>
-        <h3 class="box-credit"><span>100</span></h3>
+        <h3 class="box-credit"><span id="credit">100</span></h3>
       </div>
     </div>
 
