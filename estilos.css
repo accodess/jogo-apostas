@@ -279,4 +279,16 @@ body {
   outline: 1px solid #2b2f78;
 }
 
-/* Exercícios all*/
+.line-break {
+  display: block;
+  width: 96%;
+  margin: 15px auto 15px auto;
+  border-bottom: 1px solid #bcc0c9;
+}
+
+/* Exercícios 2*/
+.textExer2 {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 20px;
+}

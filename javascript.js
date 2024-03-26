@@ -148,3 +148,16 @@ function startRace() {
 function alertMensagem() {
   alert("É preciso fazer todos os exercícios para aprender");
 }
+
+// Exercício 2
+function confirmMessage() {
+  let text = "Deseja continuar a realizar os exercícios?";
+  let textExer2 = document.getElementById("textExer2");
+  if (confirm(text)) {
+    textExer2.innerHTML = "Bem Escolido!";
+    textExer2.style.color = "#2b2f78";
+  } else {
+    textExer2.innerHTML = "Já chega de JavaScript";
+    textExer2.style.color = "#d2161e";
+  }
+}
