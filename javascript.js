@@ -156,8 +156,10 @@ function confirmMessage() {
   if (confirm(text)) {
     textExer2.innerHTML = "Bem Escolido!";
     textExer2.style.color = "#2b2f78";
+    textExer2.style.marginTop = "15px";
   } else {
     textExer2.innerHTML = "Já chega de JavaScript";
     textExer2.style.color = "#d2161e";
+    textExer2.style.marginTop = "15px";
   }
 }
