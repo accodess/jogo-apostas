@@ -53,7 +53,7 @@
           será exibida depois do utilizador clicar no botão.
         </p>
         <button type="button" class="btn-blue" onclick="alertMensagem()">
-          Click Me
+          Exercício 1
         </button>
       </div>
       <span class="line-break"></span>
@@ -69,9 +69,69 @@
           JavaScript”.
         </p>
         <button type="button" class="btn-blue" onclick="confirmMessage()">
-          Click to confirm
+          Exercício 2
         </button>
         <p class="textExer2" id="textExer2"></p>
+      </div>
+      <span class="line-break"></span>
+
+      <!-- Exercício 3-->
+      <div class="exercicio exercicio3">
+        <h3>Exercício 3</h3>
+        <p>
+          Crie um programa que leia o nome do utilizador através de uma caixa de
+          diálogo “Prompt” e mostre na página Web a mensagem: “O Formando” +
+          [nome formando] + ” está aprovado”. Se o utilizador clicar em
+          “Cancelar” não deverá ser exibido a mensagem.
+        </p>
+        <button type="button" class="btn-blue" onclick="readName()">
+          Exercício 3
+        </button>
+        <p class="textExer3" id="textExer3"></p>
+      </div>
+      <span class="line-break"></span>
+
+      <!-- Exercício 4-->
+      <div class="exercicio exercicio4">
+        <h3>Exercício 4</h3>
+        <p>
+          Crie um programa que leia o nome e idade do utilizador através de
+          caixas de texto e mostre na página Web a mensagem: “O Formando ” +
+          [nome formando] + ” tem ” + [idade formando ] + “ anos”.
+        </p>
+        <div class="form-4">
+          <!-- Nome -->
+          <div>
+            <label for="name-4">Nome formando</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              name="name-4"
+              id="name-4"
+              oninput="exercicio4a()"
+            />
+            <span class="message-error" id="nameError-4"> </span>
+          </div>
+          <!-- Idade -->
+          <div>
+            <label for="idade-4">Idade formando</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              name="idade-4"
+              id="idade-4"
+              oninput="exercicio4b()"
+            />
+            <span class="message-error" id="idadeError-4"></span>
+          </div>
+        </div>
+
+        <button type="button" class="btn-blue" onclick="exercicio4()">
+          Exercício 4
+        </button>
+        <p class="textExer4" id="textExer4"></p>
       </div>
       <span class="line-break"></span>
     </section>

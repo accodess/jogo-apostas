@@ -155,11 +155,68 @@ function confirmMessage() {
   let textExer2 = document.getElementById("textExer2");
   if (confirm(text)) {
     textExer2.innerHTML = "Bem Escolido!";
-    textExer2.style.color = "#2b2f78";
+    textExer2.style.color = "#04aa6d";
     textExer2.style.marginTop = "15px";
   } else {
     textExer2.innerHTML = "Já chega de JavaScript";
     textExer2.style.color = "#d2161e";
     textExer2.style.marginTop = "15px";
   }
+}
+
+// Exercício 3
+function readName() {
+  let nameFormando = prompt("Por favor digita o seu nome", "");
+
+  if (nameFormando != null) {
+    document.getElementById("textExer3").style.marginTop = "15px";
+    document.getElementById("textExer3").innerHTML =
+      "O Formando " + nameFormando + " está aprovado!";
+  }
+}
+
+// Exercício 3
+function exercicio4() {
+  let nome = document.getElementById("name-4").value;
+  let idade = document.getElementById("idade-4").value;
+
+  /* Validações */
+
+  if (nome == "") {
+    document.getElementById("nameError-4").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4">Por favor introduza o seu nome</span>';
+
+    document.getElementById("name-4").style.borderColor = "#d2161e";
+  }
+
+  if (idade == "") {
+    document.getElementById("idadeError-4").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4">Por favor introduza a sua idade</span>';
+    document.getElementById("idade-4").style.borderColor = "#d2161e";
+  }
+
+  if (isNaN(idade)) {
+    document.getElementById("idadeError-4").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4">Por favor introduza corretamente a sua idade</span>';
+    document.getElementById("idade-4").style.borderColor = "#d2161e";
+  } else if (Number(idade) < 0 || Number(idade) > 130) {
+    document.getElementById("idadeError-4").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4">Por favor introduza a idade entre 0 e 130 anos</span>';
+    document.getElementById("idade-4").style.borderColor = "#d2161e";
+  }
+  if (nome != "" && idade != "" && idade >= 0) {
+    document.getElementById("textExer4").innerHTML =
+      "O Formando/a " + nome + " tem " + idade + " anos.";
+    document.getElementById("textExer4").style.marginTop = "15px";
+  }
+}
+
+function exercicio4a() {
+  document.getElementById("nameError-4").innerHTML = "";
+  document.getElementById("name-4").style.borderColor = "#2b2f78";
+}
+
+function exercicio4b() {
+  document.getElementById("idadeError-4").innerHTML = "";
+  document.getElementById("idade-4").style.borderColor = "#2b2f78";
 }
