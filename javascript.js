@@ -211,12 +211,22 @@ function exercicio4() {
   }
 }
 
+// Limpar erros no nome
 function exercicio4a() {
   document.getElementById("nameError-4").innerHTML = "";
   document.getElementById("name-4").style.borderColor = "#2b2f78";
 }
 
+// Limpar erros no idade
 function exercicio4b() {
   document.getElementById("idadeError-4").innerHTML = "";
   document.getElementById("idade-4").style.borderColor = "#2b2f78";
+}
+
+// Exercício 5
+function exercicio5() {
+  console.log("Eu sou a Alona Costa e sou adepto do Dynamo Kiev");
+  document.getElementById("textExer5").innerHTML =
+    "Para ver me - abra console ;)";
+  document.getElementById("textExer5").style.marginTop = "15px";
 }
