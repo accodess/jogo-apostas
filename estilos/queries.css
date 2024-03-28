@@ -1,0 +1,40 @@
+/* Exercícios 1- 10*/
+@media screen and (max-width: 1500px) {
+  .form-4 input,
+  .form-6 input,
+  .estado-civil-6 {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .form-4 input,
+  .form-6 input,
+  .estado-civil-6 {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .form-4 input,
+  .form-6 input,
+  .estado-civil-6 {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .form-4 input,
+  .form-6 input,
+  .estado-civil-6 {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form-4 input,
+  .form-6 input,
+  .estado-civil-6 {
+    width: 90%;
+  }
+}

@@ -23,7 +23,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Sahitya:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="estilos/estilos.css" />
+    <link rel="stylesheet" href="estilos/queries.css" />
     <title>Jogo Apostas</title>
   </head>
   <body class="background1">
@@ -155,39 +156,115 @@
         <h3>Exercício 6</h3>
         <p>
           Crie um programa que leia do utilizador os seguintes dados e de
-          seguida mostre-os num parágrafo
+          seguida mostre-os num parágrafo.
         </p>
-        <p>
-          • Nome: [Nome do formando] • Estado civil: (Casado; Solteiro;
-          Divorciado; Viúvo) • Idade: [Idade formando] • Altura: [Altura do
-          formando] • Sócio: [Sim/Não] • Email: [Email do formando]
-        </p>
+        <ul class="list-6">
+          <li>Nome: [Nome do formando]</li>
+          <li>Estado civil: (Casado; Solteiro; Divorciado; Viúvo)</li>
+          <li>Idade: [Idade formando]</li>
+          <li>Altura: [Altura do formando]</li>
+          <li>Sócio: [Sim/Não]</li>
+          <li>Email: [Email do formando]</li>
+        </ul>
 
-        <button type="button" class="btn-blue" onclick="exercicio5()">
-          Exercício 5
+        <div class="form-6">
+          <!-- Nome -->
+          <div>
+            <label for="name-6">Nome</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              name="name-6"
+              id="name-6"
+              oninput="exercicio6a()"
+            />
+            <span class="message-error" id="nameError-6"> </span>
+          </div>
+          <!-- Estado civil -->
+          <div>
+            <label for="estado-civil-6">Estado Civil</label>
+          </div>
+          <div>
+            <select
+              name="estado-civil-6"
+              id="estado-civil-6"
+              class="estado-civil-6"
+              onchange="exercicio6b()"
+            >
+              <option value="">Por favor escolha uma opção</option>
+              <option value="casado">Casado</option>
+              <option value="solteiro">Solteiro</option>
+              <option value="divorciado">Divorciado</option>
+              <option value="viuvo">Viúvo</option>
+            </select>
+
+            <span class="message-error" id="civilError-6"> </span>
+          </div>
+          <!-- Idade -->
+          <div>
+            <label for="idade-6">Idade</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              name="idade-6"
+              id="idade-6"
+              oninput="exercicio6c()"
+            />
+            <span class="message-error" id="idadeError-6"></span>
+          </div>
+          <!-- Altura -->
+          <div>
+            <label for="altura-6">Altura (cm) </label>
+          </div>
+          <div>
+            <input
+              type="number"
+              name="altura-6"
+              id="altura-6"
+              min="30"
+              oninput="exercicio6d()"
+            />
+            <span class="message-error" id="alturaError-6"></span>
+          </div>
+
+          <!-- Sócio -->
+          <p class="text-socio-6">Sócio</p>
+          <div class="socio-box-6">
+            <label for="sim-socio-6">Sim</label>
+            <input
+              type="radio"
+              name="sim-socio-6"
+              id="sim-socio-6"
+              value="sim"
+              onchange="exercicio6e()"
+            />
+            <span class="message-error" id="socioError-6"></span>
+          </div>
+          <div class="socio-box-6">
+            <label for="nao-socio-6">Não</label>
+            <input
+              type="radio"
+              name="nao-socio-6"
+              id="nao-socio-6"
+              value="nao"
+              onchange="exercicio6e()"
+            />
+          </div>
+        </div>
+
+        <button type="button" class="btn-blue" onclick="exercicio6()">
+          Exercício 6
         </button>
-        <p class="textExer5" id="textExer5"></p>
-      </div>
-      <span class="line-break"></span>
-
-      <!-- Exercício next-->
-      <div class="exercicio">
-        <h3>Exercício 5</h3>
-        <p>
-          Crie um programa que mostre na “console” a mensagem: “Eu sou o “ [nome
-          formando] “ e sou adepto do ” [clube de futebol]
-        </p>
-
-        <button type="button" class="btn-blue" onclick="exercicio5()">
-          Exercício 5
-        </button>
-        <p class="textExer5" id="textExer5"></p>
+        <p class="textExer6" id="textExer6"></p>
       </div>
       <span class="line-break"></span>
     </section>
 
     <footer class="footer">&copy; Alona Costa</footer>
 
-    <script src="javascript.js"></script>
+    <script src="javascript/javascript.js"></script>
+    <script src="javascript/exercicios1-10.js"></script>
   </body>
 </html>

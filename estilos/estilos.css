@@ -294,13 +294,16 @@ body {
   font-size: 16px;
 }
 
-/* Exercícios 4*/
-.form-4 {
+/* Exercícios 4, 6*/
+.form-4,
+.form-6 {
   margin-top: 15px;
 }
 
-.form-4 input {
-  width: 20%;
+.form-4 input,
+.form-6 input,
+.estado-civil-6 {
+  width: 25%;
   padding: 8px 0 8px 10px;
   border-radius: 5px;
   border: 1px solid #2b2f78;
@@ -308,17 +311,21 @@ body {
   color: #2b2f78;
 }
 
-.form-4 input:focus {
+.form-4 input:focus,
+.form-6 input:focus,
+.estado-civil-6:focus {
   outline: 1px solid #2b2f78;
   background-color: #e9eafb;
 }
 
-.form-4 label {
+.form-4 label,
+.form-6 label {
   font-weight: 600;
   font-size: 15px;
 }
 
-.form-4 .message-error {
+.form-4 .message-error,
+.form-6 .message-error {
   display: inline-flex;
   align-items: center;
   font-size: 14px;
@@ -335,4 +342,18 @@ body {
 
 .error-text-4 {
   display: inline-block;
+}
+
+/* Exercícios 6*/
+.list-6 {
+  margin-left: 20px;
+}
+
+.text-socio-6 {
+  font-weight: 600;
+}
+
+input#sim-socio-6,
+input#nao-socio-6 {
+  width: 30px;
 }
