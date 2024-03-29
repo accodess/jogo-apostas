@@ -92,6 +92,9 @@ function exercicio6() {
   let estadoCivil = document.getElementById("estado-civil-6").value;
   let idade = document.getElementById("idade-6").value;
   let altura = document.getElementById("altura-6").value;
+  let socioSim = document.getElementById("sim-socio-6").checked;
+  let socioNao = document.getElementById("nao-socio-6").checked;
+  let email = document.getElementById("email-6").value;
 
   /* Validações */
 
@@ -139,6 +142,25 @@ function exercicio6() {
     document.getElementById("altura-6").style.borderColor = "#d2161e";
   }
 
+  /* Validação do socio*/
+  if (socioSim == false && socioNao == false) {
+    document.getElementById("socioError-6").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4">Por favor faz a sua escolha</span>';
+  }
+
+  /* Validação do email*/
+  if (email == "") {
+    document.getElementById("emailError-6").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4">Por favor introduza o seu email</span>';
+
+    document.getElementById("email-6").style.borderColor = "#d2161e";
+  } else if (!email.includes("@")) {
+    document.getElementById("emailError-6").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4">Por favor introduza o seu email corretamente</span>';
+
+    document.getElementById("email-6").style.borderColor = "#d2161e";
+  }
+
   if (
     nome != "" &&
     estadoCivil != "" &&
@@ -147,17 +169,21 @@ function exercicio6() {
     altura != ""
   ) {
     nome = nome.charAt(0).toUpperCase() + nome.slice(1);
-    document.getElementById("textExer6").innerHTML =
-      "O Formando/a " +
-      nome +
-      " é " +
-      estadoCivil +
-      "/a, tem " +
-      idade +
-      " anos e tem altura " +
-      altura +
-      " cm";
-    document.getElementById("textExer6").style.marginTop = "15px";
+
+    if ((socioSim != "" || socioNao != "") && email != "") {
+      document.getElementById("textExer6").innerHTML =
+        "O Formando/a " +
+        nome +
+        " é " +
+        estadoCivil +
+        "/a, tem " +
+        idade +
+        " anos e tem altura " +
+        altura +
+        " cm e é o sócio. Email - " +
+        email;
+      document.getElementById("textExer6").style.marginTop = "15px";
+    }
   }
 }
 
@@ -165,6 +191,7 @@ function exercicio6() {
 function exercicio6a() {
   document.getElementById("nameError-6").innerHTML = "";
   document.getElementById("name-6").style.borderColor = "#2b2f78";
+  document.getElementById("name-6").style.forcedColorAdjust = "#fff";
 }
 
 // Limpar erros no estado civil
@@ -183,4 +210,14 @@ function exercicio6c() {
 function exercicio6d() {
   document.getElementById("alturaError-6").innerHTML = "";
   document.getElementById("altura-6").style.borderColor = "#2b2f78";
+}
+
+// Limpar erros no sócio
+function exercicio6e() {
+  document.getElementById("socioError-6").innerHTML = "";
+}
+
+// Limpar erros no email
+function exercicio6f() {
+  document.getElementById("emailError-6").innerHTML = "";
 }

@@ -311,11 +311,22 @@ body {
   color: #2b2f78;
 }
 
+input:-webkit-autofill {
+  /*background-color: #fff !important;*/
+  -webkit-box-shadow: 0 0 0 50px white inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #2b2f78;
+}
+
 .form-4 input:focus,
 .form-6 input:focus,
 .estado-civil-6:focus {
   outline: 1px solid #2b2f78;
   background-color: #e9eafb;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px white inset; /*your box-shadow*/
+  -webkit-text-fill-color: #2b2f78;
 }
 
 .form-4 label,
