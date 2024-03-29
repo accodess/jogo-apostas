@@ -311,7 +311,8 @@ body {
   color: #2b2f78;
 }
 
-input:-webkit-autofill {
+input:-webkit-autofill,
+.estado-civil-6:-webkit-autofill {
   /*background-color: #fff !important;*/
   -webkit-box-shadow: 0 0 0 50px white inset; /* Change the color to your own background color */
   -webkit-text-fill-color: #2b2f78;
@@ -324,7 +325,8 @@ input:-webkit-autofill {
   background-color: #e9eafb;
 }
 
-input:-webkit-autofill:focus {
+input:-webkit-autofill:focus,
+.estado-civil-6:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 50px white inset; /*your box-shadow*/
   -webkit-text-fill-color: #2b2f78;
 }
