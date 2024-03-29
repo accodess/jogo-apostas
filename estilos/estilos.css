@@ -300,6 +300,17 @@ body {
   margin-top: 15px;
 }
 
+.box-name-4,
+.box-idade-4,
+.box-name-6,
+.box-estadocivil-6,
+.box-idade-6,
+.box-altura-6,
+.box-socio-6,
+.box-email-6 {
+  margin-bottom: 10px;
+}
+
 .form-4 input,
 .form-6 input,
 .estado-civil-6 {
@@ -307,12 +318,11 @@ body {
   padding: 8px 0 8px 10px;
   border-radius: 5px;
   border: 1px solid #2b2f78;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   color: #2b2f78;
 }
 
-input:-webkit-autofill,
-.estado-civil-6:-webkit-autofill {
+input:-webkit-autofill {
   /*background-color: #fff !important;*/
   -webkit-box-shadow: 0 0 0 50px white inset; /* Change the color to your own background color */
   -webkit-text-fill-color: #2b2f78;
@@ -325,8 +335,7 @@ input:-webkit-autofill,
   background-color: #e9eafb;
 }
 
-input:-webkit-autofill:focus,
-.estado-civil-6:-webkit-autofill:focus {
+input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 50px white inset; /*your box-shadow*/
   -webkit-text-fill-color: #2b2f78;
 }
@@ -370,7 +379,7 @@ input:-webkit-autofill:focus,
 .socio-box-6 input {
   width: 30px;
   border: none;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
 }
 
 .socio-box-6 input:focus {

@@ -102,30 +102,35 @@
         </p>
         <div class="form-4">
           <!-- Nome -->
-          <div>
-            <label for="name-4">Nome formando</label>
+          <div class="box-name-4">
+            <div>
+              <label for="name-4">Nome formando</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="name-4"
+                id="name-4"
+                oninput="exercicio4a()"
+              />
+              <span class="message-error" id="nameError-4"> </span>
+            </div>
           </div>
-          <div>
-            <input
-              type="text"
-              name="name-4"
-              id="name-4"
-              oninput="exercicio4a()"
-            />
-            <span class="message-error" id="nameError-4"> </span>
-          </div>
+
           <!-- Idade -->
-          <div>
-            <label for="idade-4">Idade formando</label>
-          </div>
-          <div>
-            <input
-              type="text"
-              name="idade-4"
-              id="idade-4"
-              oninput="exercicio4b()"
-            />
-            <span class="message-error" id="idadeError-4"></span>
+          <div class="box-idade-4">
+            <div>
+              <label for="idade-4">Idade formando</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="idade-4"
+                id="idade-4"
+                oninput="exercicio4b()"
+              />
+              <span class="message-error" id="idadeError-4"></span>
+            </div>
           </div>
         </div>
 
@@ -169,104 +174,117 @@
 
         <div class="form-6">
           <!-- Nome -->
-          <div>
-            <label for="name-6">Nome</label>
+          <div class="box-name-6">
+            <div>
+              <label for="name-6">Nome</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="name-6"
+                id="name-6"
+                oninput="exercicio6a()"
+              />
+              <span class="message-error" id="nameError-6"> </span>
+            </div>
           </div>
-          <div>
-            <input
-              type="text"
-              name="name-6"
-              id="name-6"
-              oninput="exercicio6a()"
-            />
-            <span class="message-error" id="nameError-6"> </span>
-          </div>
-          <!-- Estado civil -->
-          <div>
-            <label for="estado-civil-6">Estado Civil</label>
-          </div>
-          <div>
-            <select
-              name="estado-civil-6"
-              id="estado-civil-6"
-              class="estado-civil-6"
-              onchange="exercicio6b()"
-            >
-              <option value="">Por favor escolha uma opção</option>
-              <option value="casado">Casado</option>
-              <option value="solteiro">Solteiro</option>
-              <option value="divorciado">Divorciado</option>
-              <option value="viuvo">Viúvo</option>
-            </select>
 
-            <span class="message-error" id="civilError-6"> </span>
+          <!-- Estado civil -->
+          <div class="box-estadocivil-6">
+            <div>
+              <label for="estado-civil-6">Estado Civil</label>
+            </div>
+            <div>
+              <select
+                name="estado-civil-6"
+                id="estado-civil-6"
+                class="estado-civil-6"
+                onchange="exercicio6b()"
+              >
+                <option value="">Por favor escolha uma opção</option>
+                <option value="casado">Casado</option>
+                <option value="solteiro">Solteiro</option>
+                <option value="divorciado">Divorciado</option>
+                <option value="viuvo">Viúvo</option>
+              </select>
+              <span class="message-error" id="civilError-6"> </span>
+            </div>
           </div>
           <!-- Idade -->
-          <div>
-            <label for="idade-6">Idade</label>
-          </div>
-          <div>
-            <input
-              type="text"
-              name="idade-6"
-              id="idade-6"
-              oninput="exercicio6c()"
-            />
-            <span class="message-error" id="idadeError-6"></span>
+          <div class="box-idade-6">
+            <div>
+              <label for="idade-6">Idade</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="idade-6"
+                id="idade-6"
+                oninput="exercicio6c()"
+              />
+              <span class="message-error" id="idadeError-6"></span>
+            </div>
           </div>
           <!-- Altura -->
-          <div>
-            <label for="altura-6">Altura (cm) </label>
-          </div>
-          <div>
-            <input
-              type="number"
-              name="altura-6"
-              id="altura-6"
-              min="30"
-              oninput="exercicio6d()"
-            />
-            <span class="message-error" id="alturaError-6"></span>
+          <div class="box-altura-6">
+            <div>
+              <label for="altura-6">Altura (cm) </label>
+            </div>
+            <div>
+              <input
+                type="number"
+                name="altura-6"
+                id="altura-6"
+                min="30"
+                oninput="exercicio6d()"
+              />
+              <span class="message-error" id="alturaError-6"></span>
+            </div>
           </div>
 
           <!-- Sócio -->
-          <p class="text-socio-6">Sócio</p>
-          <div class="socio-box-6">
+          <div class="box-socio-6">
+            <p class="text-socio-6">Sócio</p>
+            <div class="socio-box-6">
+              <div>
+                <label for="sim-socio-6">Sim</label>
+                <input
+                  type="radio"
+                  name="socio-6"
+                  id="sim-socio-6"
+                  value="sim"
+                  onchange="exercicio6e()"
+                />
+              </div>
+              <div>
+                <label for="nao-socio-6">Não</label>
+                <input
+                  type="radio"
+                  name="socio-6"
+                  id="nao-socio-6"
+                  value="nao"
+                  onchange="exercicio6e()"
+                />
+              </div>
+              <span class="message-error" id="socioError-6"></span>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="box-email-6">
             <div>
-              <label for="sim-socio-6">Sim</label>
-              <input
-                type="radio"
-                name="socio-6"
-                id="sim-socio-6"
-                value="sim"
-                onchange="exercicio6e()"
-              />
+              <label for="email-6">Email</label>
             </div>
             <div>
-              <label for="nao-socio-6">Não</label>
               <input
-                type="radio"
-                name="socio-6"
-                id="nao-socio-6"
-                value="nao"
-                onchange="exercicio6e()"
+                type="email"
+                name="email-6"
+                id="email-6"
+                oninput="exercicio6f()"
+                autocomplete="email"
               />
+              <span class="message-error" id="emailError-6"> </span>
             </div>
-            <span class="message-error" id="socioError-6"></span>
-          </div>
-          <!-- Nome -->
-          <div>
-            <label for="email-6">Email</label>
-          </div>
-          <div>
-            <input
-              type="email"
-              name="email-6"
-              id="email-6"
-              oninput="exercicio6f()"
-              autocomplete="email"
-            />
-            <span class="message-error" id="emailError-6"> </span>
           </div>
         </div>
 
