@@ -368,21 +368,12 @@ input:-webkit-autofill:focus {
 .socio-box-6 input {
   width: 30px;
   border: none;
+  margin-bottom: 12px;
 }
 
 .socio-box-6 input:focus {
   outline: none;
 }
-
-/* input#sim-socio-6,
-input#nao-socio-6 {
-  
-}
-
-input#sim-socio-6:focus,
-input#nao-socio-6:focus {
- 
-} */
 
 .socio-box-6 {
   display: flex;
