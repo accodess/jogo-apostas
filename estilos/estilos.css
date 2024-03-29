@@ -330,7 +330,8 @@ input:-webkit-autofill:focus {
 }
 
 .form-4 label,
-.form-6 label {
+.form-6 label,
+.text-socio-6 {
   font-weight: 600;
   font-size: 15px;
 }
