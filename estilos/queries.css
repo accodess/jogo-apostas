@@ -5,36 +5,129 @@
   .estado-civil-6 {
     width: 35%;
   }
+
+  .socio-box-6 input {
+    width: 30px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
+  .header,
+  .footer,
+  .active-race {
+    width: 85%;
+  }
+
+  .section-main {
+    width: 85%;
+  }
   .form-4 input,
   .form-6 input,
   .estado-civil-6 {
     width: 40%;
   }
+  .socio-box-6 input {
+    width: 30px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
+  body {
+    font-size: 14px;
+  }
+
+  .header,
+  .footer,
+  .active-race {
+    width: 85%;
+  }
+
+  .section-main {
+    width: 85%;
+  }
+
+  .logo-box h1 {
+    font-size: 26px;
+  }
+
+  .logo {
+    height: 80px;
+  }
+
   .form-4 input,
   .form-6 input,
   .estado-civil-6 {
     width: 50%;
   }
+
+  .socio-box-6 input {
+    width: 30px;
+  }
 }
 
 @media screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+
+  .header,
+  .footer,
+  .active-race {
+    width: 90%;
+  }
+  .section-main {
+    width: 90%;
+  }
+  .logo-box {
+    flex-direction: column;
+  }
+  .logo {
+    height: 50px;
+    align-self: center;
+    margin-bottom: 10px;
+  }
+  .logo-box h1 {
+    font-size: 22px;
+  }
+
+  .box-titulo h3 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
   .form-4 input,
   .form-6 input,
   .estado-civil-6 {
     width: 65%;
   }
+  .socio-box-6 input {
+    width: 30px;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    font-size: 13px;
+  }
+
+  .header,
+  .footer,
+  .active-race {
+    width: 95%;
+  }
+
+  .section-main {
+    width: 95%;
+    margin: 10px auto 10px auto;
+  }
+
   .form-4 input,
   .form-6 input,
   .estado-civil-6 {
-    width: 90%;
+    width: 95%;
+  }
+
+  .socio-box-6 input {
+    width: 30px;
   }
 }
