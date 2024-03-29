@@ -170,7 +170,11 @@ function exercicio6() {
   ) {
     nome = nome.charAt(0).toUpperCase() + nome.slice(1);
 
-    if ((socioSim != "" || socioNao != "") && email != "") {
+    if (
+      (socioSim != "" || socioNao != "") &&
+      email != "" &&
+      email.includes("@")
+    ) {
       document.getElementById("textExer6").innerHTML =
         "O Formando/a " +
         nome +
@@ -220,4 +224,5 @@ function exercicio6e() {
 // Limpar erros no email
 function exercicio6f() {
   document.getElementById("emailError-6").innerHTML = "";
+  document.getElementById("email-6").style.borderColor = "#2b2f78";
 }
