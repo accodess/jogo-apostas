@@ -141,6 +141,13 @@
     margin-bottom: 0px;
   }
 
+  input {
+    font-size: 12px;
+  }
+  input::placeholder {
+    font-size: 12px;
+  }
+
   .estado-civil-6 {
     height: 34px;
   }

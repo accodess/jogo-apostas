@@ -226,3 +226,53 @@ function exercicio6f() {
   document.getElementById("emailError-6").innerHTML = "";
   document.getElementById("email-6").style.borderColor = "#2b2f78";
 }
+
+// Exercício 7
+function exercicio7() {
+  let date = new Date();
+  let numDay = date.getDate();
+  let month = date.getMonth();
+  let year = date.getFullYear();
+
+  switch (month) {
+    case 0:
+      month = "Janeiro";
+      break;
+    case 1:
+      month = "Fevereiro";
+      break;
+    case 2:
+      month = "Março";
+      break;
+    case 3:
+      month = "Abril";
+      break;
+    case 4:
+      month = "Maio";
+      break;
+    case 5:
+      month = "Junho";
+      break;
+    case 6:
+      month = "Julho";
+      break;
+    case 7:
+      month = "Agosto";
+      break;
+    case 8:
+      month = "Setembro";
+      break;
+    case 9:
+      month = "Outubro";
+      break;
+    case 10:
+      month = "Novembro";
+      break;
+    case 11:
+      month = "Dezembro";
+      break;
+  }
+  document.getElementById("textExer7").innerHTML =
+    numDay + " de " + month + " de " + year;
+  document.getElementById("textExer7").style.marginTop = "15px";
+}
