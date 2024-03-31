@@ -294,14 +294,16 @@ body {
 .textExer6,
 .textExer7,
 .textExer8,
-.textExer10 {
+.textExer10,
+.textExer11 {
   font-weight: 600;
   font-size: 16px;
 }
 
 /* Exercícios 4, 6*/
 .form-4,
-.form-6 {
+.form-6,
+.form-11 {
   margin-top: 15px;
 }
 
@@ -312,12 +314,14 @@ body {
 .box-idade-6,
 .box-altura-6,
 .box-socio-6,
-.box-email-6 {
+.box-email-6,
+.box-numero-11 {
   margin-bottom: 10px;
 }
 
 .form-4 input,
 .form-6 input,
+.form-11 input,
 .estado-civil-6 {
   width: 360px;
   padding: 8px 0 8px 10px;
@@ -335,6 +339,7 @@ input:-webkit-autofill {
 
 .form-4 input:focus,
 .form-6 input:focus,
+.form-11 input:focus,
 .estado-civil-6:focus {
   outline: 1px solid #2b2f78;
   background-color: #e9eafb;
@@ -347,13 +352,15 @@ input:-webkit-autofill:focus {
 
 .form-4 label,
 .form-6 label,
+.form-11 label,
 .text-socio-6 {
   font-weight: 600;
   font-size: 15px;
 }
 
 .form-4 .message-error,
-.form-6 .message-error {
+.form-6 .message-error,
+.form-11 .message-error {
   display: inline-flex;
   align-items: center;
   font-size: 14px;

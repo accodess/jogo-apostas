@@ -43,16 +43,42 @@
         </ul>
       </nav>
     </header>
-
+    <!-- Corpo da página-->
     <section class="section-main">
-      <!-- Corpo da página-->
-      <div class="pista1">1</div>
-      <div class="pista2">2</div>
-      <div class="pista3">3</div>
+      <!-- Exercício 11-->
+      <div class="exercicio">
+        <h3>Exercício 11</h3>
+        <p>
+          Escreva um programa que leia um número inteiro do utilizador e mostre
+          se é positivo ou negativo.
+        </p>
+        <div class="form-11">
+          <div class="box-numero-11">
+            <div>
+              <label for="numero-11">Insere um número</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="numero-11"
+                id="numero-11"
+                oninput="exercicio11a()"
+              />
+              <span class="message-error" id="numeroError-11"> </span>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn-blue" onclick="exercicio11()">
+          Exercício 11
+        </button>
+        <p class="textExer11" id="textExer11"></p>
+      </div>
+      <span class="line-break"></span>
     </section>
 
     <footer class="footer">&copy; Alona Costa</footer>
 
     <script src="javascript/javascript.js"></script>
+    <script src="javascript/exercicios11-20.js"></script>
   </body>
 </html>
