@@ -298,3 +298,10 @@ function exercicio8() {
 function exercicio9() {
   window.print();
 }
+
+// Exercício 10
+function exercicio10() {
+  let url = document.URL;
+  document.getElementById("textExer10").innerHTML = url;
+  document.getElementById("textExer10").style.marginTop = "15px";
+}
