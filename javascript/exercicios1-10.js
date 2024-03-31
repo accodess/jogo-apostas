@@ -293,3 +293,8 @@ function exercicio8() {
     textExer8.style.marginTop = "15px";
   }
 }
+
+// Exercício 9
+function exercicio9() {
+  window.print();
+}
