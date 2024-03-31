@@ -286,10 +286,13 @@ body {
   border-bottom: 1px solid #bcc0c9;
 }
 
-/* Exercícios 2, 3*/
+/* Exercícios 2, 3, 4, 5, 6, 7, 8*/
 .textExer2,
 .textExer3,
-.textExer5 {
+.textExer5,
+.textExer6,
+.textExer7,
+.textExer8 {
   font-weight: 600;
   font-size: 16px;
 }

@@ -276,3 +276,20 @@ function exercicio7() {
     numDay + " de " + month + " de " + year;
   document.getElementById("textExer7").style.marginTop = "15px";
 }
+
+// Exercício 8
+function exercicio8() {
+  let horas = new Date().getHours();
+  let textExer8 = document.getElementById("textExer8");
+
+  if (horas >= 5 && horas < 12) {
+    textExer8.innerHTML = "Bom dia!";
+    textExer8.style.marginTop = "15px";
+  } else if (horas >= 12 && horas < 19) {
+    textExer8.innerHTML = "Boa tarde!";
+    textExer8.style.marginTop = "15px";
+  } else {
+    textExer8.innerHTML = "Boa noite!";
+    textExer8.style.marginTop = "15px";
+  }
+}
