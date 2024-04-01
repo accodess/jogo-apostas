@@ -153,3 +153,74 @@ function exercicio14c() {
   document.getElementById("numeroError3-14").innerHTML = "";
   document.getElementById("numero3-14").style.borderColor = "#2b2f78";
 }
+
+// Exercício 15
+function exercicio15() {
+  let num1 = Number(document.getElementById("numero1-15").value);
+  let num2 = Number(document.getElementById("numero2-15").value);
+  let num3 = Number(document.getElementById("numero3-15").value);
+  let differ1 = 0;
+  let differ2 = 0;
+  let differ3 = 0;
+  let formOk = true;
+
+  if (isNaN(num1) || num1 == "") {
+    document.getElementById("numeroError1-15").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número 1!</span>';
+    formOk = false;
+    document.getElementById("numero1-15").style.borderColor = "#d2161e";
+  }
+
+  if (isNaN(num2) || num2 == "") {
+    document.getElementById("numeroError2-15").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número 2!</span>';
+    formOk = false;
+    document.getElementById("numero2-15").style.borderColor = "#d2161e";
+  }
+  if (isNaN(num3) || num3 == "") {
+    document.getElementById("numeroError3-15").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número 3!</span>';
+    formOk = false;
+    document.getElementById("numero3-15").style.borderColor = "#d2161e";
+  }
+
+  differ1 = 100 - num1;
+  differ2 = 100 - num2;
+  differ3 = 100 - num3;
+
+  if (formOk) {
+    if (differ1 == differ2 && differ2 == differ3) {
+      document.getElementById("textExer15").innerHTML =
+        "Os números são iguais e ficam todos mais perto de 100.";
+      document.getElementById("textExer15").style.marginTop = "15px";
+    } else if (differ1 <= differ2 && differ1 <= differ3) {
+      document.getElementById("textExer15").innerHTML =
+        "O número " + num1 + " é mais perto de 100.";
+      document.getElementById("textExer15").style.marginTop = "15px";
+    } else if (differ2 <= differ1 && differ2 <= differ3) {
+      document.getElementById("textExer15").innerHTML =
+        "O número " + num2 + " é mais perto de 100.";
+      document.getElementById("textExer15").style.marginTop = "15px";
+    } else {
+      document.getElementById("textExer15").innerHTML =
+        "O número " + num3 + " é mais perto de 100.";
+      document.getElementById("textExer15").style.marginTop = "15px";
+    }
+  }
+}
+
+// Limpar erros no número
+function exercicio15a() {
+  document.getElementById("numeroError1-15").innerHTML = "";
+  document.getElementById("numero1-15").style.borderColor = "#2b2f78";
+}
+// Limpar erros no número
+function exercicio15b() {
+  document.getElementById("numeroError2-15").innerHTML = "";
+  document.getElementById("numero2-15").style.borderColor = "#2b2f78";
+}
+// Limpar erros no número
+function exercicio15c() {
+  document.getElementById("numeroError3-15").innerHTML = "";
+  document.getElementById("numero3-15").style.borderColor = "#2b2f78";
+}
