@@ -224,3 +224,52 @@ function exercicio15c() {
   document.getElementById("numeroError3-15").innerHTML = "";
   document.getElementById("numero3-15").style.borderColor = "#2b2f78";
 }
+
+// Exercício 16
+function exercicio16() {
+  let nota = document.getElementById("nota-16").value;
+
+  let formOk = true;
+
+  if (isNaN(nota) || nota == "") {
+    document.getElementById("notaError-16").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza a sua nota!</span>';
+    formOk = false;
+    document.getElementById("nota-16").style.borderColor = "#d2161e";
+  } else if (nota < 0 || nota > 20) {
+    document.getElementById("notaError-16").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> A nota válida entre 0 e 20!</span>';
+    formOk = false;
+    document.getElementById("nota-16").style.borderColor = "#d2161e";
+  }
+
+  if (formOk) {
+    if (nota >= 0 && nota < 5) {
+      document.getElementById("textExer16").innerHTML =
+        "A sua nota qualitativa é Muito Insuficiente";
+      document.getElementById("textExer16").style.marginTop = "15px";
+    } else if (nota >= 5 && nota < 9.5) {
+      document.getElementById("textExer16").innerHTML =
+        "A sua nota qualitativa é Insuficiente";
+      document.getElementById("textExer16").style.marginTop = "15px";
+    } else if (nota >= 9.5 && nota < 14) {
+      document.getElementById("textExer16").innerHTML =
+        "A sua nota qualitativa é Suficiente";
+      document.getElementById("textExer16").style.marginTop = "15px";
+    } else if (nota >= 14 && nota < 16) {
+      document.getElementById("textExer16").innerHTML =
+        "A sua nota qualitativa é Bom";
+      document.getElementById("textExer16").style.marginTop = "15px";
+    } else if (nota >= 16 && nota <= 20) {
+      document.getElementById("textExer16").innerHTML =
+        "A sua nota qualitativa é Muito Bom";
+      document.getElementById("textExer16").style.marginTop = "15px";
+    }
+  }
+}
+
+// Limpar erros no número
+function exercicio16a() {
+  document.getElementById("notaError-16").innerHTML = "";
+  document.getElementById("nota-16").style.borderColor = "#2b2f78";
+}

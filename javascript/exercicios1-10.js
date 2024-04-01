@@ -25,7 +25,7 @@ function readName() {
   if (nameFormando != null) {
     document.getElementById("textExer3").style.marginTop = "15px";
     document.getElementById("textExer3").innerHTML =
-      "O Formando " + nameFormando + " está aprovado!";
+      "O Formando/a " + nameFormando + " está aprovado!";
   }
 }
 

@@ -291,6 +291,7 @@ body {
 .textExer,
 .textExer2,
 .textExer3,
+.textExer4,
 .textExer5,
 .textExer6,
 .textExer7,
@@ -414,4 +415,11 @@ input:-webkit-autofill:focus {
 
 .socio-box-6 {
   display: flex;
+}
+
+/* Exercício 16*/
+.list-text {
+  list-style: none;
+  font-style: italic;
+  font-weight: 600;
 }
