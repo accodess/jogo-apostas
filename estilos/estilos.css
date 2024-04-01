@@ -287,7 +287,8 @@ body {
   border-bottom: 1px solid #bcc0c9;
 }
 
-/* Exercícios 2, 3, 4, 5, 6, 7, 8*/
+/* Exercícios 2, 3, 4, 5, 6, 7, 8 ..60*/
+.textExer,
 .textExer2,
 .textExer3,
 .textExer5,
@@ -304,7 +305,8 @@ body {
 /* Exercícios 4, 6*/
 .form-4,
 .form-6,
-.form-11 {
+.form-11,
+.form-13 {
   margin-top: 15px;
 }
 
@@ -316,13 +318,15 @@ body {
 .box-altura-6,
 .box-socio-6,
 .box-email-6,
-.box-numero-11 {
+.box-numero-11,
+.box-numero-13 {
   margin-bottom: 10px;
 }
 
 .form-4 input,
 .form-6 input,
 .form-11 input,
+.form-13 input,
 .estado-civil-6 {
   width: 360px;
   padding: 8px 0 8px 10px;
@@ -341,6 +345,7 @@ input:-webkit-autofill {
 .form-4 input:focus,
 .form-6 input:focus,
 .form-11 input:focus,
+.form-13 input:focus,
 .estado-civil-6:focus {
   outline: 1px solid #2b2f78;
   background-color: #e9eafb;
@@ -354,6 +359,7 @@ input:-webkit-autofill:focus {
 .form-4 label,
 .form-6 label,
 .form-11 label,
+.form-13 label,
 .text-socio-6 {
   font-weight: 600;
   font-size: 15px;
@@ -361,7 +367,8 @@ input:-webkit-autofill:focus {
 
 .form-4 .message-error,
 .form-6 .message-error,
-.form-11 .message-error {
+.form-11 .message-error,
+.form-13 .message-error {
   display: inline-flex;
   align-items: center;
   font-size: 14px;

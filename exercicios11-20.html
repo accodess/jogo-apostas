@@ -82,7 +82,6 @@
           Escreva um programa que leia dois números ao utilizador e mostre qual
           deles é o maior.
         </p>
-
         <button type="button" class="btn-blue" onclick="exercicio12()">
           Exercício 12
         </button>
@@ -99,10 +98,31 @@
           certos/errados.
         </p>
 
+        <div class="form-13">
+          <div class="box-numero-13">
+            <div>
+              <label for="numero-13"
+                >Por favor, faz o seu palpite! Insere o número entre 1 e
+                6!</label
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                name="numero-13"
+                id="numero-13"
+                oninput="exercicio13a()"
+              />
+              <span class="message-error" id="numeroError-13"> </span>
+            </div>
+          </div>
+        </div>
+
         <button type="button" class="btn-blue" onclick="exercicio13()">
           Exercício 13
         </button>
-        <p class="textExer13" id="textExer13"></p>
+        <p class="textExer" id="textExer13"></p>
+        <p class="textExer" id="textExer13a"></p>
       </div>
       <span class="line-break"></span>
     </section>
