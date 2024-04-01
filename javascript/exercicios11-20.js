@@ -58,6 +58,8 @@ function exercicio12() {
 }
 
 // Exercício 13
+window.onload = sessionStorage.setItem("numCertos", "0");
+window.onload = sessionStorage.setItem("numErr", "0");
 function exercicio13() {
   if (!sessionStorage.getItem("numCertos")) {
     sessionStorage.setItem("numCertos", "0");
@@ -95,9 +97,6 @@ function exercicio13() {
       sessionStorage.numErr;
     console.log(numRand);
   }
-
-  console.log(sessionStorage.numCertos);
-  console.log(sessionStorage.numErr);
 }
 
 // Limpar erros no número
