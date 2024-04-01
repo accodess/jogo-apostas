@@ -1,5 +1,6 @@
 /* Exercícios 1- 10*/
 @media screen and (max-width: 1500px) {
+  .form input,
   .form-4 input,
   .form-6 input,
   .form-11 input,
@@ -23,6 +24,8 @@
   .section-main {
     width: 85%;
   }
+
+  .form input,
   .form-4 input,
   .form-6 input,
   .form-11 input,
@@ -58,6 +61,7 @@
     height: 80px;
   }
 
+  .form input,
   .form-4 input,
   .form-6 input,
   .form-11 input,
@@ -102,6 +106,7 @@
     text-orientation: mixed;
   }
 
+  .form input,
   .form-4 input,
   .form-6 input,
   .form-11 input,
@@ -115,6 +120,7 @@
     width: 30px;
   }
 
+  .form .message-error,
   .form-4 .message-error,
   .form-6 .message-error,
   .form-11 .message-error,
@@ -145,6 +151,7 @@
     margin: 10px auto 10px auto;
   }
 
+  .form input,
   .form-4 input,
   .form-6 input,
   .form-11 input,
@@ -170,6 +177,7 @@
     /* margin-bottom: 20px; */
   }
 
+  .form .message-error,
   .form-4 .message-error,
   .form-6 .message-error,
   .form-11 .message-error,

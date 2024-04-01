@@ -61,14 +61,7 @@ function exercicio12() {
 window.onload = sessionStorage.setItem("numCertos", "0");
 window.onload = sessionStorage.setItem("numErr", "0");
 function exercicio13() {
-  if (!sessionStorage.getItem("numCertos")) {
-    sessionStorage.setItem("numCertos", "0");
-  }
-  if (!sessionStorage.getItem("numErr")) {
-    sessionStorage.setItem("numErr", "0");
-  }
   let formOk = true;
-
   let num = Number(document.getElementById("numero-13").value);
 
   if (isNaN(num) || num < 1 || num > 6) {
@@ -103,4 +96,60 @@ function exercicio13() {
 function exercicio13a() {
   document.getElementById("numeroError-13").innerHTML = "";
   document.getElementById("numero-13").style.borderColor = "#2b2f78";
+}
+
+// Exercício 14
+function exercicio14() {
+  let num1 = Number(document.getElementById("numero1-14").value);
+  let num2 = Number(document.getElementById("numero2-14").value);
+  let num3 = Number(document.getElementById("numero3-14").value);
+  let numeros = [];
+  let formOk = true;
+
+  if (isNaN(num1) || num1 == "") {
+    document.getElementById("numeroError1-14").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número 1!</span>';
+    formOk = false;
+    document.getElementById("numero1-14").style.borderColor = "#d2161e";
+  }
+
+  if (isNaN(num2) || num2 == "") {
+    document.getElementById("numeroError2-14").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número 2!</span>';
+    formOk = false;
+    document.getElementById("numero2-14").style.borderColor = "#d2161e";
+  }
+  if (isNaN(num3) || num3 == "") {
+    document.getElementById("numeroError3-14").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número 3!</span>';
+    formOk = false;
+    document.getElementById("numero3-14").style.borderColor = "#d2161e";
+  }
+  numeros.push(num1, num2, num3);
+  numeros.sort(function (a, b) {
+    return a - b;
+  });
+  console.log(numeros);
+
+  if (formOk) {
+    document.getElementById("textExer14").innerHTML =
+      "Ordem crescente dos números &rarr; " + numeros.join(",  ");
+    document.getElementById("textExer14").style.marginTop = "15px";
+  }
+}
+
+// Limpar erros no número
+function exercicio14a() {
+  document.getElementById("numeroError1-14").innerHTML = "";
+  document.getElementById("numero1-14").style.borderColor = "#2b2f78";
+}
+// Limpar erros no número
+function exercicio14b() {
+  document.getElementById("numeroError2-14").innerHTML = "";
+  document.getElementById("numero2-14").style.borderColor = "#2b2f78";
+}
+// Limpar erros no número
+function exercicio14c() {
+  document.getElementById("numeroError3-14").innerHTML = "";
+  document.getElementById("numero3-14").style.borderColor = "#2b2f78";
 }

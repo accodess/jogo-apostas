@@ -302,7 +302,8 @@ body {
   font-size: 16px;
 }
 
-/* Exercícios 4, 6*/
+/* Exercícios 4, 6 .. 60*/
+.form,
 .form-4,
 .form-6,
 .form-11,
@@ -310,6 +311,7 @@ body {
   margin-top: 15px;
 }
 
+.box-numero,
 .box-name-4,
 .box-idade-4,
 .box-name-6,
@@ -323,6 +325,7 @@ body {
   margin-bottom: 10px;
 }
 
+.form input,
 .form-4 input,
 .form-6 input,
 .form-11 input,
@@ -342,6 +345,7 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #2b2f78;
 }
 
+.form input:focus,
 .form-4 input:focus,
 .form-6 input:focus,
 .form-11 input:focus,
@@ -356,6 +360,7 @@ input:-webkit-autofill:focus {
   -webkit-text-fill-color: #2b2f78;
 }
 
+.form label,
 .form-4 label,
 .form-6 label,
 .form-11 label,
@@ -365,6 +370,7 @@ input:-webkit-autofill:focus {
   font-size: 15px;
 }
 
+.form .message-error,
 .form-4 .message-error,
 .form-6 .message-error,
 .form-11 .message-error,
