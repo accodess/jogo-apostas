@@ -1,4 +1,4 @@
-# font-family ->
+# font-family -> "Roboto Slab", "Sahitya", serif;
 
 # cor principal -> #d2161e, #2b2f78, #fff
 

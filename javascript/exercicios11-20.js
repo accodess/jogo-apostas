@@ -1,3 +1,4 @@
+// Exercício 11
 function exercicio11() {
   let num = document.getElementById("numero-11").value;
   if (isNaN(num) || num == "") {
@@ -19,4 +20,25 @@ function exercicio11() {
 function exercicio11a() {
   document.getElementById("numeroError-11").innerHTML = "";
   document.getElementById("numero-11").style.borderColor = "#2b2f78";
+}
+
+// Exercício 12
+function exercicio12() {
+  let num1, num2, max;
+  let text = document.getElementById("textExer12");
+  // Validámos os números inseridos
+  do {
+    num1 = window.prompt("Digite o primeiro número: ");
+  } while (num1 == "" || isNaN(num1));
+
+  do {
+    num2 = window.prompt("Digite o segundo número: ");
+  } while (num2 == "" || isNaN(num2));
+
+  max = Math.max(num1, num2);
+
+  text.innerHTML = "O maior número é " + max;
+  text.style.marginTop = "15px";
+
+  console.log(Math.max(num1, num2));
 }
