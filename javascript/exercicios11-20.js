@@ -29,10 +29,26 @@ function exercicio12() {
   // Validámos os números inseridos
   do {
     num1 = window.prompt("Digite o primeiro número: ");
+    if (num1 == "") {
+      num1 = window.prompt("Erro! Digitar o primeiro número novamente: ");
+    }
+    if (isNaN(num1)) {
+      num1 = window.prompt(
+        "Não é número! Digitar o primeiro número novamente: "
+      );
+    }
   } while (num1 == "" || isNaN(num1));
 
   do {
     num2 = window.prompt("Digite o segundo número: ");
+    if (num2 == "") {
+      num2 = window.prompt("Erro! Digitar o segundo número novamente: ");
+    }
+    if (isNaN(num2)) {
+      num2 = window.prompt(
+        "Não é número! Digitar o segundo número novamente: "
+      );
+    }
   } while (num2 == "" || isNaN(num2));
 
   max = Math.max(num1, num2);
