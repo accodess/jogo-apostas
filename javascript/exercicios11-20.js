@@ -290,17 +290,13 @@ function exercicio17() {
     document.getElementById("frase-17").style.borderColor = "#d2161e";
   }
 
-  //console.log(frase.split("não"));
-  //console.log(frase.split("nao"));
   if (formOk) {
     if (frase.includes("não")) {
       let array = frase.split("não");
-      //array = frase.split("nao");
       document.getElementById("textExer17").innerHTML = array;
       document.getElementById("textExer17").style.marginTop = "15px";
     } else if (frase.includes("nao")) {
       let array = frase.split("nao");
-      //array = frase.split("nao");
       document.getElementById("textExer17").innerHTML = array;
       document.getElementById("textExer17").style.marginTop = "15px";
     } else {
@@ -316,5 +312,52 @@ function exercicio17a() {
   if (frase.length >= 10) {
     document.getElementById("fraseError-17").innerHTML = " ";
     document.getElementById("frase-17").style.borderColor = "#2b2f78";
+  }
+}
+
+// Exercício 18
+function exercicio18() {
+  let frase = document.getElementById("frase-18").value;
+  let formOk = true;
+
+  console.log(frase);
+
+  if (frase.length < 10) {
+    document.getElementById("fraseError-18").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza no mínimo 10 caracteres!</span>';
+    formOk = false;
+    document.getElementById("frase-18").style.borderColor = "#d2161e";
+  }
+
+  if (formOk) {
+    let array = frase.split("");
+    console.log(array);
+    let num = 0;
+
+    for (let i = 0; i < array.length; i++) {
+      let charater = array[i];
+      // if (!isNaN(charater) && charater != " ") {
+      //   num += 1;
+      // }
+      // Verificar se o caratere é um dígito numérico
+      console.log(!isNaN(parseInt(charater)));
+      if (!isNaN(parseInt(charater))) {
+        num += 1;
+      }
+    }
+    document.getElementById("textExer18").innerHTML = `Na sua frase ${
+      num == 0 || num == 1 ? "existe" : "existem"
+    } ${num} ${num == 1 ? "caratere numérico" : "carateres numéricos"} `;
+    document.getElementById("textExer18").style.marginTop = "15px";
+    console.log(num);
+  }
+}
+
+// Limpar erros na frase
+function exercicio18a() {
+  let frase = document.getElementById("frase-18").value;
+  if (frase.length >= 10) {
+    document.getElementById("fraseError-18").innerHTML = " ";
+    document.getElementById("frase-18").style.borderColor = "#2b2f78";
   }
 }
