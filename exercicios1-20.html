@@ -37,9 +37,9 @@
       <nav class="nav">
         <ul class="nav-menu">
           <li><a href="index.html">Jogo</a></li>
-          <li class="active-link"><a href="exercicios1-10.html">1..10</a></li>
-          <li><a href="exercicios11-20.html">11..20</a></li>
-          <li><a href="exercicios21-30.html">21..30</a></li>
+          <li class="active-link"><a href="exercicios1-20.html">1..20</a></li>
+          <li><a href="exercicios21-40.html">21..40</a></li>
+          <li><a href="exercicios41-60.html">41..60</a></li>
         </ul>
       </nav>
     </header>
@@ -348,11 +348,213 @@
         <p class="textExer10" id="textExer10"></p>
       </div>
       <span class="line-break"></span>
+
+      <!-- Exercício 11-->
+      <div class="exercicio">
+        <h3>Exercício 11</h3>
+        <p>
+          Escreva um programa que leia um número inteiro do utilizador e mostre
+          se é positivo ou negativo.
+        </p>
+        <div class="form-11">
+          <div class="box-numero-11">
+            <div>
+              <label for="numero-11">Insere um número</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="numero-11"
+                id="numero-11"
+                oninput="exercicio11a()"
+              />
+              <span class="message-error" id="numeroError-11"> </span>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn-blue" onclick="exercicio11()">
+          Exercício 11
+        </button>
+        <p class="textExer11" id="textExer11"></p>
+      </div>
+      <span class="line-break"></span>
+
+      <!-- Exercício 12-->
+      <div class="exercicio">
+        <h3>Exercício 12</h3>
+        <p>
+          Escreva um programa que leia dois números ao utilizador e mostre qual
+          deles é o maior.
+        </p>
+        <button type="button" class="btn-blue" onclick="exercicio12()">
+          Exercício 12
+        </button>
+        <p class="textExer12" id="textExer12"></p>
+      </div>
+      <span class="line-break"></span>
+
+      <!-- Exercício 13-->
+      <div class="exercicio">
+        <h3>Exercício 13</h3>
+        <p>
+          Crie um programa que gera um número aleatório entre 1 e 6 e pergunte
+          ao utilizador qual é o seu palpite. Mostre a quantidade de palpites
+          certos/errados.
+        </p>
+
+        <div class="form-13">
+          <div class="box-numero-13">
+            <div>
+              <label for="numero-13"
+                >Por favor, faz o seu palpite! Insere o número entre 1 e
+                6!</label
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                name="numero-13"
+                id="numero-13"
+                oninput="exercicio13a()"
+              />
+              <span class="message-error" id="numeroError-13"> </span>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn-blue" onclick="exercicio13()">
+          Exercício 13
+        </button>
+        <p class="textExer" id="textExer13"></p>
+        <p class="textExer" id="textExer13a"></p>
+      </div>
+      <span class="line-break"></span>
+
+      <!-- Exercício 14-->
+      <div class="exercicio">
+        <h3>Exercício 14</h3>
+        <p>
+          Crie um programa que leia 3 números do utilizador e mostre-os por
+          ordem crescente.
+        </p>
+
+        <div class="form">
+          <div class="box-numero">
+            <div>
+              <label for="numero1-14">Digite Nº 1</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="numero1-14"
+                id="numero1-14"
+                oninput="exercicio14a()"
+              />
+              <span class="message-error" id="numeroError1-14"> </span>
+            </div>
+          </div>
+
+          <div class="box-numero">
+            <div>
+              <label for="numero2-14">Digite Nº 2</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="numero2-14"
+                id="numero2-14"
+                oninput="exercicio14b()"
+              />
+              <span class="message-error" id="numeroError2-14"> </span>
+            </div>
+          </div>
+          <div class="box-numero">
+            <div>
+              <label for="numero3-14">Digite Nº 3</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="numero3-14"
+                id="numero3-14"
+                oninput="exercicio14c()"
+              />
+              <span class="message-error" id="numeroError3-14"> </span>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn-blue" onclick="exercicio14()">
+          Exercício 14
+        </button>
+        <p class="textExer" id="textExer14"></p>
+      </div>
+      <span class="line-break"></span>
+
+      <!-- Exercício 15-->
+      <div class="exercicio">
+        <h3>Exercício 15</h3>
+        <p>
+          Crie um programa que leia 3 números do utilizador e mostre o que está
+          mais perto de 100.
+        </p>
+
+        <div class="form">
+          <div class="box-numero">
+            <div>
+              <label for="numero1-15">Digite Nº 1</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="numero1-15"
+                id="numero1-15"
+                oninput="exercicio15a()"
+              />
+              <span class="message-error" id="numeroError1-15"> </span>
+            </div>
+          </div>
+
+          <div class="box-numero">
+            <div>
+              <label for="numero2-15">Digite Nº 2</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="numero2-15"
+                id="numero2-15"
+                oninput="exercicio15b()"
+              />
+              <span class="message-error" id="numeroError2-15"> </span>
+            </div>
+          </div>
+          <div class="box-numero">
+            <div>
+              <label for="numero3-15">Digite Nº 3</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="numero3-15"
+                id="numero3-15"
+                oninput="exercicio15c()"
+              />
+              <span class="message-error" id="numeroError3-15"> </span>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn-blue" onclick="exercicio15()">
+          Exercício 15
+        </button>
+        <p class="textExer" id="textExer15"></p>
+      </div>
+      <span class="line-break"></span>
     </section>
 
     <footer class="footer">&copy; Alona Costa</footer>
 
     <script src="javascript/javascript.js"></script>
     <script src="javascript/exercicios1-10.js"></script>
+    <script src="javascript/exercicios11-20.js"></script>
   </body>
 </html>
