@@ -379,7 +379,8 @@ function exercicio19() {
     let reverseArray = array.reverse();
     let joinArray = reverseArray.join("");
 
-    document.getElementById("textExer19").innerHTML = joinArray;
+    document.getElementById("textExer19").innerHTML =
+      "Frase invertida - " + " ' " + joinArray + " '";
     document.getElementById("textExer19").style.marginTop = "15px";
   }
 }
@@ -390,4 +391,45 @@ function exercicio19a() {
     document.getElementById("fraseError-19").innerHTML = " ";
     document.getElementById("frase-19").style.borderColor = "#2b2f78";
   }
+}
+
+// Exercício 20
+function exercicio20() {
+  let euro = parseFloat(document.getElementById("euro-20").value);
+  let cambio = parseFloat(document.getElementById("cambio-20").value);
+  let formOk = true;
+
+  if (isNaN(euro) || euro == "") {
+    document.getElementById("euroError-20").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o valor em euros!</span>';
+    formOk = false;
+    document.getElementById("euro-20").style.borderColor = "#d2161e";
+  }
+
+  if (isNaN(cambio) || cambio == "") {
+    document.getElementById("cambioError-20").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o câmbio!</span>';
+    formOk = false;
+    document.getElementById("cambio-20").style.borderColor = "#d2161e";
+  }
+
+  if (formOk) {
+    let valorDollar = converterEuroParaDollar(euro, cambio);
+    document.getElementById("textExer20").innerHTML = `${valorDollar} $`;
+    document.getElementById("textExer20").style.margin = "10px 10px 5px 12px";
+  }
+}
+// Limpar erros no euro
+function exercicio20a() {
+  document.getElementById("euroError-20").innerHTML = " ";
+  document.getElementById("euro-20").style.borderColor = "#2b2f78";
+}
+// Limpar erros no câmbio
+function exercicio20b() {
+  document.getElementById("cambioError-20").innerHTML = " ";
+  document.getElementById("cambio-20").style.borderColor = "#2b2f78";
+}
+// Transformar euro para dollars
+function converterEuroParaDollar(valorEuro, cambio) {
+  return valorEuro * cambio;
 }

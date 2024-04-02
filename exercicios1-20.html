@@ -654,8 +654,8 @@
       <div class="exercicio">
         <h3>Exercício 19</h3>
         <p>
-          19. Crie um programa que leia uma frase do utilizador e mostre a frase
-          com os caracteres invertidos.
+          Crie um programa que leia uma frase do utilizador e mostre a frase com
+          os caracteres invertidos.
         </p>
 
         <div class="form">
@@ -678,6 +678,51 @@
           Exercício 19
         </button>
         <p class="textExer" id="textExer19"></p>
+      </div>
+      <span class="line-break"></span>
+
+      <!-- Exercício 20-->
+      <div class="exercicio">
+        <h3>Exercício 20</h3>
+        <p>
+          Crie uma função receba um valor em euros e mostre o valor convertido
+          em dólares. O valor do câmbio deverá ser dado pelo utilizador.
+        </p>
+
+        <div class="form">
+          <div class="box-numero">
+            <div>
+              <label for="euro-20">Digite o valor em euros (€)</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="euro-20"
+                id="euro-20"
+                oninput="exercicio20a()"
+              />
+              <span class="message-error" id="euroError-20"> </span>
+            </div>
+          </div>
+          <div class="box-numero">
+            <div>
+              <label for="cambio-20">Câmbio</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="cambio-20"
+                id="cambio-20"
+                oninput="exercicio20b()"
+              />
+              <span class="message-error" id="cambioError-20"> </span>
+            </div>
+          </div>
+        </div>
+        <p class="textExer" id="textExer20"></p>
+        <button type="button" class="btn-blue" onclick="exercicio20()">
+          Exercício 20
+        </button>
       </div>
       <span class="line-break"></span>
     </section>
