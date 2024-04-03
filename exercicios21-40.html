@@ -44,10 +44,41 @@
       </nav>
     </header>
     <!-- Corpo da página-->
-    <section class="section-main"></section>
+    <section class="section-main">
+      <!-- Exercício 21-->
+      <div class="exercicio">
+        <h3>Exercício 21</h3>
+        <p>
+          Crie uma função que receba um número e converta-o num número negativo.
+        </p>
+
+        <div class="form">
+          <div class="box-numero">
+            <div>
+              <label for="numero-21">Digite um número positivo</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="numero-21"
+                id="numero-21"
+                oninput="exercicio21a()"
+              />
+              <span class="message-error" id="numeroError-21"> </span>
+            </div>
+          </div>
+        </div>
+        <p class="textExer" id="textExer21"></p>
+        <button type="button" class="btn-blue" onclick="exercicio21()">
+          Exercício 21
+        </button>
+      </div>
+      <span class="line-break"></span>
+    </section>
 
     <footer class="footer">&copy; Alona Costa</footer>
 
     <script src="javascript/javascript.js"></script>
+    <script src="javascript/exercicios21-30.js"></script>
   </body>
 </html>
