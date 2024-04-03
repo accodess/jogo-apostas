@@ -74,6 +74,55 @@
         </button>
       </div>
       <span class="line-break"></span>
+
+      <!-- Exercício 22-->
+      <div class="exercicio">
+        <h3>Exercício 22</h3>
+        <p>
+          Crie uma função receba um valor (com imposto) e a percentagem de
+          imposto e devolva o valor sem o imposto assim como o valor do imposto.
+        </p>
+
+        <div class="form">
+          <div class="box-numero">
+            <div>
+              <label for="numero-22"
+                >Digite o valor total (com imposto) (€)</label
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                name="numero-22"
+                id="numero-22"
+                oninput="exercicio22a()"
+              />
+              <span class="message-error" id="numeroError-22"> </span>
+            </div>
+          </div>
+          <div class="box-numero">
+            <div>
+              <label for="percent-22"
+                >Digite o percentagem do imposto (%)</label
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                name="percent-22"
+                id="percent-22"
+                oninput="exercicio22b()"
+              />
+              <span class="message-error" id="percentError-22"> </span>
+            </div>
+          </div>
+        </div>
+        <p class="textExer" id="textExer22"></p>
+        <button type="button" class="btn-blue" onclick="exercicio22()">
+          Exercício 22
+        </button>
+      </div>
+      <span class="line-break"></span>
     </section>
 
     <footer class="footer">&copy; Alona Costa</footer>
