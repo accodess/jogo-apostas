@@ -157,7 +157,6 @@ function exercicio23b() {
 // Devolver valor sem impostos e valor do imposto
 function devolverValorComImpostos(valor, percentImposto) {
   let valorImposto = (valor * (percentImposto / 100)).toFixed(2);
-  console.log(parseFloat(valor + valorImposto));
   let valorComImposto = (parseFloat(valor) + parseFloat(valorImposto)).toFixed(
     2
   );
