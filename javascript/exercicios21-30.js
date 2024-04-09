@@ -206,3 +206,24 @@ function gerirPalavraPasse(numCarateres) {
   }
   return `A sua palavra-passe - '${password}'`;
 }
+
+// Exercício 25
+function exercicio25() {
+  document.getElementById("textExer25").innerHTML = maiorNumero();
+  document.getElementById("textExer25").style.margin = "10px 10px 5px 12px";
+}
+
+// Encontrar o  maior número no array
+function maiorNumero() {
+  const numeros = [];
+  const lengthArr = 100;
+
+  for (let i = 0; i < lengthArr; i++) {
+    numeros[i] = Math.floor(Math.random() * lengthArr);
+  }
+  const array = numeros.join(", ");
+  const maxNumber = Math.max(...numeros);
+
+  return `Array = [${array}] <br>
+  Maior número do array é ${maxNumber}`;
+}
