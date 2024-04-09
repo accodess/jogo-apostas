@@ -163,3 +163,46 @@ function devolverValorComImpostos(valor, percentImposto) {
   return `O valor com impostos - ${valorComImposto} € <br>
   O valor do imposto - ${valorImposto} €`;
 }
+
+// Exercício 24
+function exercicio24() {
+  let numero = parseFloat(document.getElementById("numero-24").value);
+  let formOk = true;
+
+  if (isNaN(numero) || numero == "") {
+    document.getElementById("numeroError-24").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número!</span>';
+    formOk = false;
+    document.getElementById("numero-24").style.borderColor = "#d2161e";
+  }
+
+  if (numero <= 0) {
+    document.getElementById("numeroError-24").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número positivo!</span>';
+    formOk = false;
+    document.getElementById("numero-24").style.borderColor = "#d2161e";
+  }
+
+  if (formOk) {
+    document.getElementById("textExer24").innerHTML = gerirPalavraPasse(numero);
+    document.getElementById("textExer24").style.margin = "10px 10px 5px 12px";
+  }
+}
+// Limpar erros no euro
+function exercicio24a() {
+  document.getElementById("numeroError-23").innerHTML = " ";
+  document.getElementById("numero-23").style.borderColor = "#2b2f78";
+}
+
+// Gerir a palavra-passe para utilizador
+function gerirPalavraPasse(numCarateres) {
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let password = "";
+  for (let i = 0; i < numCarateres; i++) {
+    password += characters.charAt(
+      Math.floor(Math.random() * characters.length)
+    );
+  }
+  return `A sua palavra-passe - '${password}'`;
+}
