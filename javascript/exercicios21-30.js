@@ -366,3 +366,31 @@ function diferencaMaiorMenor(valor1, valor2) {
     return `A diferença entre ${valor1} e  ${valor2}  &rarr;  ${diferenca}`;
   }
 }
+
+// Exercício 29
+function exercicio29() {
+  document.getElementById("img-dado-29").style.transform = "rotate(150deg)";
+
+  document.getElementById("img-dado-29").style.left = "55px";
+  document.getElementById("textExer29").innerHTML = lancarDado(35000);
+  document.getElementById("textExer29").style.margin = "10px 10px 5px 12px";
+}
+
+// Lançar o dado e contar as fases
+function lancarDado(numVezes) {
+  const dado = [0, 0, 0, 0, 0, 0];
+  let face;
+
+  for (let i = 0; i < numVezes; i++) {
+    face = Math.floor(Math.random() * 7) + 1;
+    dado[face - 1]++;
+  }
+
+  return `Fase 1 saiu - ${dado[0]} vezes<br>
+  Fase 2 saiu - ${dado[1]} vezes <br>
+  Fase 3 saiu - ${dado[2]} vezes <br>
+  Fase 4 saiu - ${dado[3]} vezes <br>
+  Fase 5 saiu - ${dado[4]} vezes <br>
+  Fase 6 saiu - ${dado[5]} vezes <br>
+  `;
+}
