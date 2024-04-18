@@ -339,7 +339,7 @@
           <img
             class="img-dado"
             id="img-dado-29"
-            src="/imagens/dado.avif"
+            src="imagens/dado.avif"
             alt="dado"
           />
         </div>
@@ -377,6 +377,52 @@
         <p class="textExer" id="textExer30"></p>
         <button type="button" class="btn-blue" onclick="exercicio30()">
           Exercício 30
+        </button>
+      </div>
+      <span class="line-break"></span>
+
+      <!-- Exercício 31-->
+      <div class="exercicio">
+        <h3>Exercício 31</h3>
+        <p>
+          Crie um programa que leia do utilizador duas strings (password,
+          confirmação da password) e verifique se são iguais. Se não for mostre
+          uma mensagem de erro.
+        </p>
+
+        <div class="form">
+          <div class="box-numero">
+            <div>
+              <label for="pass-31">Digite a palavra-passe</label>
+            </div>
+            <div class="box-input-31">
+              <input
+                type="password"
+                name="pass-31"
+                id="pass-31"
+                oninput="exercicio31a()"
+              />
+              <span class="message-error" id="passError-31"> </span>
+            </div>
+          </div>
+          <div class="box-numero">
+            <div>
+              <label for="pass-conf-31">Confirme a palavra-passe</label>
+            </div>
+            <div>
+              <input
+                type="password"
+                name="pass-conf-31"
+                id="pass-conf-31"
+                oninput="exercicio31b()"
+              />
+              <span class="message-error" id="pass-confError-31"> </span>
+            </div>
+          </div>
+        </div>
+        <p class="textExer" id="textExer31"></p>
+        <button type="button" class="btn-blue" onclick="exercicio31()">
+          Exercício 31
         </button>
       </div>
       <span class="line-break"></span>

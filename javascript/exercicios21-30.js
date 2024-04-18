@@ -426,3 +426,67 @@ function exercicio30a() {
   document.getElementById("numeroError-30").innerHTML = " ";
   document.getElementById("numero-30").style.borderColor = "#2b2f78";
 }
+
+// Exercício 31
+function exercicio31() {
+  let pass = document.getElementById("pass-31").value;
+  let passConfirm = document.getElementById("pass-conf-31").value;
+
+  let formOk = true;
+
+  if (pass == "") {
+    document.getElementById("passError-31").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza a palavra-passe!</span>';
+    formOk = false;
+    document.getElementById("pass-31").style.borderColor = "#d2161e";
+  }
+  if (passConfirm == "") {
+    document.getElementById("pass-confError-31").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor confirme a palavra-passe!</span>';
+    formOk = false;
+    document.getElementById("pass-conf-31").style.borderColor = "#d2161e";
+  }
+
+  if (formOk == true) {
+    if (pass !== passConfirm) {
+      document.getElementById("pass-confError-31").innerHTML =
+        '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> </span>';
+      document.getElementById("passError-31").innerHTML =
+        '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> </span>';
+      formOk = false;
+      document.getElementById("pass-31").style.borderColor = "#d2161e";
+      document.getElementById("pass-conf-31").style.borderColor = "#d2161e";
+      document.getElementById(
+        "textExer31"
+      ).innerHTML = `As palavras-passe não correspondem! Tenta novamente! `;
+      document.getElementById("textExer31").style.margin = "10px 10px 5px 12px";
+      document.getElementById("textExer31").style.color = "#d2161e";
+    } else {
+      document.getElementById(
+        "textExer31"
+      ).innerHTML = `A sua palavra-passe está criada! `;
+      document.getElementById("textExer31").style.margin = "10px 10px 5px 12px";
+      document.getElementById("textExer31").style.color = "#2b2f78";
+      exercicio31a();
+      exercicio31b();
+    }
+  }
+}
+
+// Limpar erros no número
+function exercicio31a() {
+  document.getElementById("passError-31").innerHTML = " ";
+  document.getElementById("pass-31").style.borderColor = "#2b2f78";
+  let span = document.createElement("span");
+  span.classList.add("show");
+  let text = document.createTextNode("show");
+  span.appendChild(text);
+  let child = document.getElementById("passError-31");
+  let element = document.getElementById("box-input-31");
+  element.insertBefore(span, child);
+}
+// Limpar erros no confirmação da palavra-passe
+function exercicio31b() {
+  document.getElementById("pass-confError-31").innerHTML = " ";
+  document.getElementById("pass-conf-31").style.borderColor = "#2b2f78";
+}
