@@ -476,17 +476,14 @@ function exercicio31() {
 // Limpar erros no número
 function exercicio31a() {
   document.getElementById("passError-31").innerHTML = " ";
+  document.getElementById("pass-confError-31").innerHTML = " ";
   document.getElementById("pass-31").style.borderColor = "#2b2f78";
-  let span = document.createElement("span");
-  span.classList.add("show");
-  let text = document.createTextNode("show");
-  span.appendChild(text);
-  let child = document.getElementById("passError-31");
-  let element = document.getElementById("box-input-31");
-  element.insertBefore(span, child);
+  document.getElementById("pass-conf-31").style.borderColor = "#2b2f78";
 }
 // Limpar erros no confirmação da palavra-passe
 function exercicio31b() {
+  document.getElementById("passError-31").innerHTML = " ";
   document.getElementById("pass-confError-31").innerHTML = " ";
   document.getElementById("pass-conf-31").style.borderColor = "#2b2f78";
+  document.getElementById("pass-31").style.borderColor = "#2b2f78";
 }
