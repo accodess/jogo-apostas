@@ -487,3 +487,12 @@ function exercicio31b() {
   document.getElementById("pass-conf-31").style.borderColor = "#2b2f78";
   document.getElementById("pass-31").style.borderColor = "#2b2f78";
 }
+
+// Exercício 32
+function exercicio32() {
+  let retangulo = document.getElementById("retangulo32");
+  retangulo.style.display = "block";
+  let context = retangulo.getContext("2d");
+  context.fillStyle = "blue";
+  context.fillRect(68, 36, 150, 80);
+}
