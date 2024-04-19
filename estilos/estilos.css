@@ -436,8 +436,14 @@ input:-webkit-autofill:focus {
 }
 
 /* Eexercício 32 */
-#retangulo32 {
+#retangulo32,
+#circulo33 {
   width: 100px;
   height: 100px;
   display: none;
+}
+
+#circulo33 {
+  margin-top: 20px;
+  margin-left: 15px;
 }

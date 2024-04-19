@@ -493,6 +493,19 @@ function exercicio32() {
   let retangulo = document.getElementById("retangulo32");
   retangulo.style.display = "block";
   let context = retangulo.getContext("2d");
-  context.fillStyle = "blue";
-  context.fillRect(68, 36, 150, 80);
+  context.fillStyle = "#2b2f78";
+  context.fillRect(40, 40, 150, 80);
+}
+
+// Exercício 33
+function exercicio33() {
+  let circulo = document.getElementById("circulo33");
+  circulo.style.display = "block";
+  let context = circulo.getContext("2d");
+
+  context.beginPath();
+  console.log(context.beginPath());
+  context.arc(35, 35, 35, 0, 2 * Math.PI, false);
+  context.fillStyle = "#d2161e";
+  context.fill();
 }
