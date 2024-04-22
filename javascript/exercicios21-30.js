@@ -683,3 +683,26 @@ function exercicio38() {
     }
   }
 }
+
+// Exercício 39
+function exercicio39() {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let data = new Date(document.getElementById("date-39").value);
+
+  let month = months[data.getMonth()];
+
+  document.getElementById("textExer39").innerHTML = month;
+}
