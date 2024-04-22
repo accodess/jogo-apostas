@@ -701,8 +701,117 @@ function exercicio39() {
     "December",
   ];
   let data = new Date(document.getElementById("date-39").value);
-
   let month = months[data.getMonth()];
-
   document.getElementById("textExer39").innerHTML = month;
+}
+
+// Exercício 40
+function exercicio40() {
+  let horaEntrada = document.getElementById("horaEntrada-40").value;
+  let horaSaida = document.getElementById("horaSaida-40").value;
+
+  let formOk = true;
+
+  if (horaEntrada == "") {
+    document.getElementById("horaEntradaError-40").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza a hora e minutos!</span>';
+    formOk = false;
+    document.getElementById("horaEntrada-40").style.borderColor = "#d2161e";
+  } else if (!horaEntrada.includes(":")) {
+    document.getElementById("horaEntradaError-40").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Digite o formato correto!</span>';
+    formOk = false;
+    document.getElementById("horaEntrada-40").style.borderColor = "#d2161e";
+  }
+  // Dividimos hora e minutos usando separador ':'
+  // partesHoraEntrada[0] contem hora
+  // partesHoraEntrada[1] contem minutos
+  let partesHoraEntrada = horaEntrada.split(":");
+
+  if (isNaN(partesHoraEntrada[0]) || isNaN(partesHoraEntrada[1])) {
+    document.getElementById("horaEntradaError-40").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Digite a hora e os minutos!</span>';
+    formOk = false;
+    document.getElementById("horaEntrada-40").style.borderColor = "#d2161e";
+  } else if (
+    partesHoraEntrada[0] > 24 ||
+    partesHoraEntrada[0] < 0 ||
+    partesHoraEntrada[1] > 60 ||
+    partesHoraEntrada[1] < 0
+  ) {
+    document.getElementById("horaEntradaError-40").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Digite a hora e os minutos correto!</span>';
+    formOk = false;
+    document.getElementById("horaEntrada-40").style.borderColor = "#d2161e";
+  }
+
+  if (horaSaida == "") {
+    document.getElementById("horaSaidaError-40").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza a hora e minutos!</span>';
+    formOk = false;
+    document.getElementById("horaSaida-40").style.borderColor = "#d2161e";
+  } else if (!horaSaida.includes(":")) {
+    document.getElementById("horaSaidaError-40").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Digite o formato correto!</span>';
+    formOk = false;
+    document.getElementById("horaSaida-40").style.borderColor = "#d2161e";
+  }
+  // Dividimos hora e minutos usando separador ':'
+  // partesHoraSaida[0] contem hora
+  // partesHoraSaida[1] contem minutos
+  let partesHoraSaida = horaSaida.split(":");
+
+  if (isNaN(partesHoraSaida[0]) || isNaN(partesHoraSaida[1])) {
+    document.getElementById("horaSaidaError-40").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Digite a hora e os minutos!</span>';
+    formOk = false;
+    document.getElementById("horaSaida-40").style.borderColor = "#d2161e";
+  } else if (
+    partesHoraSaida[0] > 24 ||
+    partesHoraSaida[0] < 0 ||
+    partesHoraSaida[1] > 60 ||
+    partesHoraSaida[1] < 0
+  ) {
+    document.getElementById("horaSaidaError-40").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Digite a hora e os minutos correto!</span>';
+    formOk = false;
+    document.getElementById("horaSaida-40").style.borderColor = "#d2161e";
+  }
+
+  if (formOk) {
+    //Converter as horas e minutos para números inteiros
+    let horaEntradaHoras = parseInt(partesHoraEntrada[0]);
+    let horaEntradaMinutos = parseInt(partesHoraEntrada[1]);
+    let horaSaidaHoras = parseInt(partesHoraSaida[0]);
+    let horaSaidaMinutos = parseInt(partesHoraSaida[1]);
+
+    // Verificar se hora da Entrada inferior de hora da Saida
+    if (
+      horaEntradaHoras < horaSaidaHoras ||
+      (horaEntradaHoras === horaSaidaHoras &&
+        horaEntradaMinutos < horaSaidaMinutos)
+    ) {
+      document.getElementById("textExer40").innerHTML =
+        "Hora da Entrada &rarr; " +
+        horaEntrada +
+        "<br> Hora da Saída &rarr; " +
+        horaSaida;
+    } else {
+      document.getElementById("textExer40").innerHTML =
+        " Erro: A hora da Entrada deve ser anterior à hora de Saída.";
+    }
+  }
+  document.getElementById("textExer37").innerHTML;
+}
+
+// Limpar erros na hora da Entrada
+function exercicio40a() {
+  document.getElementById("horaEntradaError-40").innerHTML = " ";
+  document.getElementById("horaEntrada-40").style.borderColor = "#2b2f78";
+}
+
+// Limpar erros na hora da Entrada
+function exercicio40b() {
+  document.getElementById("horaSaidaError-40").innerHTML = " ";
+  document.getElementById("horaSaida-40").style.borderColor = "#2b2f78";
 }

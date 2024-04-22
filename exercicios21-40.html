@@ -619,6 +619,54 @@
         </button>
       </div>
       <span class="line-break"></span>
+
+      <!-- Exercício 34-->
+      <div class="exercicio">
+        <h3>Exercício 40</h3>
+        <p>
+          Crie um programa que leia a hora de entrada e saída de um funcionário
+          sabendo que a hora de entrada será sempre inferior a data de saída
+          caso contrário deverá ser exibido uma mensagem de erro.
+        </p>
+
+        <div class="form">
+          <div class="box-numero">
+            <div>
+              <label for="horaEntrada-40"
+                >Digite a hora da entrada (HH:MM)</label
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                name="horaEntrada-40"
+                id="horaEntrada-40"
+                oninput="exercicio40a()"
+              />
+              <span class="message-error" id="horaEntradaError-40"> </span>
+            </div>
+          </div>
+          <div class="box-numero">
+            <div>
+              <label for="horaSaida-40">Digite a hora da saida (HH:MM)</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="horaSaida-40"
+                id="horaSaida-40"
+                oninput="exercicio40b()"
+              />
+              <span class="message-error" id="horaSaidaError-40"> </span>
+            </div>
+          </div>
+        </div>
+        <p class="textExer" id="textExer40"></p>
+        <button type="button" class="btn-blue" onclick="exercicio40()">
+          Exercício 40
+        </button>
+      </div>
+      <span class="line-break"></span>
     </section>
 
     <footer class="footer">&copy; Alona Costa</footer>
