@@ -515,7 +515,7 @@ function exercicio34() {
   let email = document.getElementById("email-34").value;
 
   let formOk = true;
-  console.log(email.length);
+
   if (email.length == 0) {
     document.getElementById("emailError-34").innerHTML =
       '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Insira o email!</span>';
@@ -533,7 +533,7 @@ function exercicio34() {
   }
 }
 
-// Limpar erros no número
+// Limpar erros no email
 function exercicio34a() {
   document.getElementById("emailError-34").innerHTML = " ";
   document.getElementById("email-34").style.borderColor = "#2b2f78";
@@ -549,4 +549,50 @@ function mostrarEmailEscondido() {
     "*".repeat(metade - parteMetade) +
     email.substring(metade, email.length);
   return metadeEscondida;
+}
+
+// Exercício 35
+function exercicio35() {
+  let nome = document.getElementById("nome-35").value;
+
+  let formOk = true;
+
+  if (nome.length == 0 || /\d/.test(nome)) {
+    document.getElementById("nomeError-35").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Insira o seu nome!</span>';
+    formOk = false;
+    document.getElementById("nome-35").style.borderColor = "#d2161e";
+  }
+
+  if (formOk) {
+    document.getElementById("textExer35").innerHTML = mostrarTexto();
+  }
+}
+
+// Limpar erros no nome
+function exercicio35a() {
+  document.getElementById("nomeError-35").innerHTML = " ";
+  document.getElementById("nome-35").style.borderColor = "#2b2f78";
+}
+
+// Mostrar data
+function mostrarTexto() {
+  let nome = document.getElementById("nome-35").value;
+  let firstLetter = nome.slice(0, 1);
+  let lastLetter = nome.slice(nome.length - 1);
+  let firstTercLetter = nome.slice(0, 3);
+  let semFirstLetter = nome.slice(1);
+  let twoLastLetters = nome.slice(nome.length - 2, nome.length);
+  let nomeSeparated = nome.split("");
+
+  console.log();
+  return `<ul class="list-6">
+  <li>Todo o nome &rarr; ${nome}</li>
+  <li>Primeira Letra do Nome &rarr; ${firstLetter}</li>
+  <li>Ultima letra do nome &rarr; ${lastLetter}</li>
+  <li>Da primeira letra até à 3ª &rarr; ${firstTercLetter}</li>
+  <li>Todas as letras menos a primeira &rarr; ${semFirstLetter}</li>
+  <li>Duas ultimas letras &rarr; ${twoLastLetters}</li>
+  <li>Todos os nomes separados por espaços &rarr; ${nomeSeparated}</li>
+  </ul>`;
 }
