@@ -583,7 +583,8 @@ function mostrarTexto() {
   let firstTercLetter = nome.slice(0, 3);
   let semFirstLetter = nome.slice(1);
   let twoLastLetters = nome.slice(nome.length - 2, nome.length);
-  let nomeSeparated = nome.split("");
+  let nomeSeparated = nome.split(" ").join(" ");
+  let letterSeparated = nome.split("").join(" ");
 
   console.log();
   return `<ul class="list-6">
@@ -594,5 +595,6 @@ function mostrarTexto() {
   <li>Todas as letras menos a primeira &rarr; ${semFirstLetter}</li>
   <li>Duas ultimas letras &rarr; ${twoLastLetters}</li>
   <li>Todos os nomes separados por espaços &rarr; ${nomeSeparated}</li>
+  <li>Todos as letras do nome separados por espaços &rarr; ${letterSeparated}</li>
   </ul>`;
 }
