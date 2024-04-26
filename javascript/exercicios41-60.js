@@ -169,3 +169,90 @@ function exercicio43d() {
   document.getElementById("aposta3Error-43").innerHTML = " ";
   document.getElementById("aposta3-43").style.borderColor = "#2b2f78";
 }
+
+// Exercício 44
+function exercicio44() {
+  let votos1 = document.getElementById("votos1-44").value;
+  let votos2 = document.getElementById("votos2-44").value;
+  let votos3 = document.getElementById("votos3-44").value;
+
+  let formOk = true;
+
+  // Verificamos introdução do votod do 1º candidato
+  if (isNaN(votos1)) {
+    document.getElementById("votos1Error-44").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Não é número, digita novamente!</span>';
+    formOk = false;
+    document.getElementById("votos1-44").style.borderColor = "#d2161e";
+  }
+  if (votos1 == "") {
+    document.getElementById("votos1Error-44").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número!</span>';
+    formOk = false;
+    document.getElementById("votos1-44").style.borderColor = "#d2161e";
+  }
+
+  // Verificamos introdução do votod do 2º candidato
+  if (isNaN(votos2)) {
+    document.getElementById("votos2Error-44").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Não é número, digita novamente!</span>';
+    formOk = false;
+    document.getElementById("votos2-44").style.borderColor = "#d2161e";
+  }
+  if (votos2 == "") {
+    document.getElementById("votos2Error-44").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número!</span>';
+    formOk = false;
+    document.getElementById("votos2-44").style.borderColor = "#d2161e";
+  }
+
+  // Verificamos introdução do votod do 3º candidato
+  if (isNaN(votos3)) {
+    document.getElementById("votos3Error-44").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Não é número, digita novamente!</span>';
+    formOk = false;
+    document.getElementById("votos3-44").style.borderColor = "#d2161e";
+  }
+  if (votos3 == "") {
+    document.getElementById("votos3Error-44").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número!</span>';
+    formOk = false;
+    document.getElementById("votos3-44").style.borderColor = "#d2161e";
+  }
+
+  if (formOk) {
+    if (votos1 > votos2 && votos1 > votos3) {
+      document.getElementById(
+        "textExer44"
+      ).innerHTML = `O 1º candidadto ganhou com ${votos1} votos!`;
+    } else if (votos2 > votos2 && votos2 > votos3) {
+      document.getElementById(
+        "textExer44"
+      ).innerHTML = `O 2º candidadto ganhou com ${votos2} votos!`;
+    } else if (votos3 > votos1 && votos3 > votos2) {
+      document.getElementById(
+        "textExer44"
+      ).innerHTML = `O 3º candidadto ganhou com ${votos3} votos!`;
+    } else {
+      document.getElementById("textExer44").innerHTML = `Houve um impate`;
+    }
+  }
+}
+
+// Limpar erros na votos do candidato 1
+function exercicio44a() {
+  document.getElementById("votos1Error-44").innerHTML = " ";
+  document.getElementById("votos1-44").style.borderColor = "#2b2f78";
+}
+
+// Limpar erros na votos do candidato 2
+function exercicio44b() {
+  document.getElementById("votos2Error-44").innerHTML = " ";
+  document.getElementById("votos2-44").style.borderColor = "#2b2f78";
+}
+
+// Limpar erros na votos do candidato 3
+function exercicio44c() {
+  document.getElementById("votos3Error-44").innerHTML = " ";
+  document.getElementById("votos3-44").style.borderColor = "#2b2f78";
+}

@@ -155,7 +155,7 @@
 
           <div class="box-numero">
             <div>
-              <label for="aposta23-43">Introduza o 3º valor sugerido</label>
+              <label for="aposta3-43">Introduza o 3º valor sugerido</label>
             </div>
             <div>
               <input
@@ -171,6 +171,69 @@
         <p class="textExer" id="textExer43"></p>
         <button type="button" class="btn-blue" onclick="exercicio43()">
           Exercício 43
+        </button>
+      </div>
+      <span class="line-break"></span>
+
+      <!-- Exercício 44-->
+      <div class="exercicio">
+        <h3>Exercício 44</h3>
+        <p>
+          Crie um programa que simule as eleições para o cargo de Presidente da
+          Junta sabendo que concorrem 3 candidatos com os respetivos votos
+          atribuídos pelo utilizador. Mostre qual o candidato com mais votos e
+          se houve empates.
+        </p>
+
+        <div class="form">
+          <div class="box-numero">
+            <div>
+              <label for="votos1-44">Introduza votos do 1º candidato</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="votos1-44"
+                id="votos1-44"
+                oninput="exercicio44a()"
+              />
+              <span class="message-error" id="votos1Error-44"> </span>
+            </div>
+          </div>
+
+          <div class="box-numero">
+            <div>
+              <label for="votos2-44">Introduza votos do 2º candidato</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="votos2-44"
+                id="votos2-44"
+                oninput="exercicio44b()"
+              />
+              <span class="message-error" id="votos2Error-44"> </span>
+            </div>
+          </div>
+
+          <div class="box-numero">
+            <div>
+              <label for="votos3-44">Introduza votos do 3º candidato</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="votos3-44"
+                id="votos3-44"
+                oninput="exercicio44c()"
+              />
+              <span class="message-error" id="votos3Error-44"> </span>
+            </div>
+          </div>
+        </div>
+        <p class="textExer" id="textExer44"></p>
+        <button type="button" class="btn-blue" onclick="exercicio44()">
+          Exercício 44
         </button>
       </div>
       <span class="line-break"></span>
