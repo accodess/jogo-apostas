@@ -96,6 +96,84 @@
         </button>
       </div>
       <span class="line-break"></span>
+
+      <!-- Exercício 43-->
+      <div class="exercicio">
+        <h3>Exercício 43</h3>
+        <p>
+          Crie um programa que simule o concurso do “Preço Certo em Euros”. O
+          programa recebe três valores dados pelos concorrentes e o valor do
+          artigo e mostra o valor mais aproximado que não ultrapassou o valor do
+          artigo.
+        </p>
+
+        <div class="form">
+          <div class="box-numero">
+            <div>
+              <label for="precoCerto-43">Introduza o preço certo</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="precoCerto-43"
+                id="precoCerto-43"
+                oninput="exercicio43a()"
+              />
+              <span class="message-error" id="precoCertoError-43"> </span>
+            </div>
+          </div>
+
+          <div class="box-numero">
+            <div>
+              <label for="aposta1-43">Introduza o 1º valor sugerido</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="aposta1-43"
+                id="aposta1-43"
+                oninput="exercicio43b()"
+              />
+              <span class="message-error" id="aposta1Error-43"> </span>
+            </div>
+          </div>
+
+          <div class="box-numero">
+            <div>
+              <label for="aposta2-43">Introduza o 2º valor sugerido</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="aposta2-43"
+                id="aposta2-43"
+                oninput="exercicio43c()"
+              />
+              <span class="message-error" id="aposta2Error-43"> </span>
+            </div>
+          </div>
+
+          <div class="box-numero">
+            <div>
+              <label for="aposta23-43">Introduza o 3º valor sugerido</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="aposta3-43"
+                id="aposta3-43"
+                oninput="exercicio43d()"
+              />
+              <span class="message-error" id="aposta3Error-43"> </span>
+            </div>
+          </div>
+        </div>
+        <p class="textExer" id="textExer43"></p>
+        <button type="button" class="btn-blue" onclick="exercicio43()">
+          Exercício 43
+        </button>
+      </div>
+      <span class="line-break"></span>
     </section>
 
     <footer class="footer">&copy; Alona Costa</footer>
