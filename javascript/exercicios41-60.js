@@ -256,3 +256,44 @@ function exercicio44c() {
   document.getElementById("votos3Error-44").innerHTML = " ";
   document.getElementById("votos3-44").style.borderColor = "#2b2f78";
 }
+
+// Exercício 45
+function exercicio45() {
+  // Gerar os números aleatórios
+  let numeros = [];
+  for (let i = 0; i < 100; i++) {
+    numeros.push(Math.floor(Math.random() * 20) + 1);
+  }
+
+  //Contar ocorrências
+  let ocorrencias = [];
+  for (let i = 0; i < numeros.length; i++) {
+    let numeroAtual = numeros[i];
+
+    let cont = 0;
+    for (let j = 0; j < numeros.length; j++) {
+      if (numeros[j] === numeroAtual) {
+        cont++;
+      }
+    }
+    let found = ocorrencias.find((num) => {
+      return num == numeroAtual;
+    });
+    if (found == undefined) {
+      ocorrencias.push(numeroAtual, cont);
+    }
+  }
+
+  let text = "";
+  for (let num in ocorrencias) {
+    if (num % 2 == 0) {
+      text += ocorrencias[num] + "&nbsp; : &nbsp;";
+    }
+    if (num % 2 != 0) {
+      text += ocorrencias[num] + "  <br>";
+    }
+  }
+  document.getElementById(
+    "textExer45"
+  ).innerHTML = `Nº&nbsp; :  &nbsp;Ocorrências <br> ${text}`;
+}
