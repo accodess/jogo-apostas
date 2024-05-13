@@ -417,24 +417,23 @@ function exercicio49() {
   let resultado = [];
   let texto = "";
 
-  // Preenchemos array com números aleatórios
+  // Preenchemos arrays com números aleatórios
   for (let i = 0; i < 10; i++) {
     numeros1.push(Math.floor(Math.random() * 10) + 1);
     numeros2.push(Math.floor(Math.random() * 10) + 1);
   }
-  console.log(numeros1, numeros2);
 
   for (let i = 0; i < numeros1.length; i++) {
     resultado.push(numeros1[i] + numeros2[i]);
   }
-  console.log(resultado);
 
   //Apresentar o resultado
+  texto += "Array 1: &nbsp;" + numeros1 + "<br>";
+  texto += "Array 2: &nbsp;" + numeros2 + "<br>";
+  texto += "Soma dos valores do arrays: ";
+
   resultado.forEach((numero) => {
     texto += numero + " ";
-    console.log(texto);
   });
-  document.getElementById(
-    "textExer49"
-  ).innerHTML = `Soma dos valores do arrays:  ${texto}`;
+  document.getElementById("textExer49").innerHTML = texto;
 }
