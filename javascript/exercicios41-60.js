@@ -326,3 +326,36 @@ function exercicio46() {
     document.getElementById("textExer46").innerHTML = resultado;
   });
 }
+
+// Exercício 47
+function exercicio47() {
+  let numbers = [];
+  let frequencyMap = {};
+  let maxFrequency = 0;
+  let mostFrequentNumber;
+
+  // Preenchemos array com números aleatórios
+  for (let i = 0; i < 10; i++) {
+    numbers.push(Math.floor(Math.random() * 10) + 1);
+  }
+  console.log(numbers);
+
+  // Encontrar o número com maior frequência
+  numbers.forEach((number) => {
+    if (!frequencyMap[number]) {
+      frequencyMap[number] = 1;
+    } else {
+      frequencyMap[number]++;
+    }
+    console.log(frequencyMap[number]);
+    if (frequencyMap[number] > maxFrequency) {
+      maxFrequency = frequencyMap[number];
+      mostFrequentNumber = number;
+    }
+  });
+
+  //Apresentar o resultado
+  document.getElementById(
+    "textExer47"
+  ).innerHTML = `Números que occore mais vezes: ${mostFrequentNumber}`;
+}
