@@ -297,3 +297,32 @@ function exercicio45() {
     "textExer45"
   ).innerHTML = `Nº&nbsp; :  &nbsp;Ocorrências <br> ${text}`;
 }
+
+// Exercício 46
+function exercicio46() {
+  let numbers = [];
+  let uniqueNumbers = [];
+  let resultado = "";
+
+  // Preenchemos array com números aleatórios
+  for (let i = 0; i < 100; i++) {
+    numbers.push(Math.floor(Math.random() * 100) + 1);
+  }
+
+  // Verificar se o cada número do array é unico
+  numbers.forEach((number) => {
+    if (!uniqueNumbers.includes(number)) {
+      uniqueNumbers.push(number);
+    }
+  });
+
+  // Apresentar o resultado
+  resultado += `Números únicos: <br>`;
+  document.getElementById("textExer46").innerHTML = resultado;
+
+  uniqueNumbers.forEach((number) => {
+    resultado += number + " ";
+    console.log(number);
+    document.getElementById("textExer46").innerHTML = resultado;
+  });
+}
