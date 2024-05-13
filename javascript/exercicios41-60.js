@@ -335,8 +335,8 @@ function exercicio47() {
   let mostFrequentNumber;
 
   // Preenchemos array com números aleatórios
-  for (let i = 0; i < 10; i++) {
-    numbers.push(Math.floor(Math.random() * 10) + 1);
+  for (let i = 0; i < 100; i++) {
+    numbers.push(Math.floor(Math.random() * 100) + 1);
   }
   console.log(numbers);
 
@@ -408,4 +408,33 @@ function exercicio48() {
 function exercicio48a() {
   document.getElementById("numeroError-48").innerHTML = " ";
   document.getElementById("numero-48").style.borderColor = "#2b2f78";
+}
+
+// Exercício 49
+function exercicio49() {
+  let numeros1 = [];
+  let numeros2 = [];
+  let resultado = [];
+  let texto = "";
+
+  // Preenchemos array com números aleatórios
+  for (let i = 0; i < 10; i++) {
+    numeros1.push(Math.floor(Math.random() * 10) + 1);
+    numeros2.push(Math.floor(Math.random() * 10) + 1);
+  }
+  console.log(numeros1, numeros2);
+
+  for (let i = 0; i < numeros1.length; i++) {
+    resultado.push(numeros1[i] + numeros2[i]);
+  }
+  console.log(resultado);
+
+  //Apresentar o resultado
+  resultado.forEach((numero) => {
+    texto += numero + " ";
+    console.log(texto);
+  });
+  document.getElementById(
+    "textExer49"
+  ).innerHTML = `Soma dos valores do arrays:  ${texto}`;
 }
