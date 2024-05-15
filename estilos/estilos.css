@@ -450,6 +450,7 @@ input:-webkit-autofill:focus {
 
 /* Exercício 50*/
 table {
+  visibility: hidden;
   width: 70%;
 }
 table,
