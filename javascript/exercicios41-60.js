@@ -556,3 +556,74 @@ function corAleatoria() {
   }
   return cor;
 }
+
+// Exercício 54
+function exercicio54() {
+  let numero = document.getElementById("numero-54").value;
+  numero = numero.toUpperCase();
+  console.log(numero);
+  console.log(numero.length);
+  let formOk = true;
+  let cor = "#";
+
+  // Verificamos introdução do número
+  if (numero.includes("/[^ws]/gi")) {
+    document.getElementById("numeroError-54").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Digita os valores apresentados!</span>';
+    formOk = false;
+    document.getElementById("numero-54").style.borderColor = "#d2161e";
+  }
+  if (numero == "") {
+    document.getElementById("numeroError-54").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número!</span>';
+    formOk = false;
+    document.getElementById("numero-54").style.borderColor = "#d2161e";
+  } else if (numero.length < 6) {
+    document.getElementById("numeroError-54").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza 6 caracteres!</span>';
+    formOk = false;
+    document.getElementById("numero-54").style.borderColor = "#d2161e";
+  } else if (numero.length >= 7) {
+    document.getElementById("numeroError-54").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza no máximo 6 caracteres!</span>';
+    formOk = false;
+    document.getElementById("numero-54").style.borderColor = "#d2161e";
+  } else if (
+    numero.includes("G") ||
+    numero.includes("H") ||
+    numero.includes("I") ||
+    numero.includes("J") ||
+    numero.includes("K") ||
+    numero.includes("L") ||
+    numero.includes("M") ||
+    numero.includes("N") ||
+    numero.includes("O") ||
+    numero.includes("P") ||
+    numero.includes("Q") ||
+    numero.includes("R") ||
+    numero.includes("S") ||
+    numero.includes("T") ||
+    numero.includes("U") ||
+    numero.includes("V") ||
+    numero.includes("W") ||
+    numero.includes("X") ||
+    numero.includes("Y") ||
+    numero.includes("Z")
+  ) {
+    document.getElementById("numeroError-54").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza só caracteres apresentados!</span>';
+    formOk = false;
+    document.getElementById("numero-54").style.borderColor = "#d2161e";
+  }
+
+  if (formOk) {
+    cor += numero;
+    document.getElementById("paragrafo54").style.backgroundColor = cor;
+  }
+}
+
+// Limpar erros no número
+function exercicio54a() {
+  document.getElementById("numeroError-54").innerHTML = " ";
+  document.getElementById("numero-54").style.borderColor = "#2b2f78";
+}
