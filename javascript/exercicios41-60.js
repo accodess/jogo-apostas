@@ -539,3 +539,20 @@ function exercicio52a() {
   document.getElementById("numeroError-52").innerHTML = " ";
   document.getElementById("numero-52").style.borderColor = "#2b2f78";
 }
+
+// Exercício 53
+function exercicio53() {
+  let novaCor = corAleatoria();
+  document.body.style.backgroundColor = novaCor;
+}
+
+// Criar Cor aleatória
+function corAleatoria() {
+  let letras = "0123456789ABCDEF";
+  let cor = "#";
+
+  for (let i = 0; i < 6; i++) {
+    cor += letras[Math.floor(Math.random() * 16)];
+  }
+  return cor;
+}
