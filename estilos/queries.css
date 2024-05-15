@@ -133,6 +133,10 @@
     width: 17px;
     height: 17px;
   }
+
+  table {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 600px) {

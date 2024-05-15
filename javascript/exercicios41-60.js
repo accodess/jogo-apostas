@@ -437,3 +437,44 @@ function exercicio49() {
   });
   document.getElementById("textExer49").innerHTML = texto;
 }
+
+// Exercício 50
+function exercicio50() {
+  let matriz = [];
+  let quantidade = 0;
+  let resultado = "";
+
+  let tabela = document.getElementById("matrizTabela50");
+  tabela.innerHTML = "";
+
+  for (let i = 0; i < 10; i++) {
+    let linha = [];
+    for (let j = 0; j < 10; j++) {
+      linha.push(Math.floor(Math.random() * 100) + 1);
+    }
+    matriz.push(linha);
+  }
+
+  for (let i = 0; i < matriz.length; i++) {
+    let linha = document.createElement("tr");
+    for (let j = 0; j < matriz[i].length; j++) {
+      let celula = document.createElement("td");
+      celula.textContent = matriz[i][j];
+      linha.appendChild(celula);
+    }
+    tabela.appendChild(linha);
+  }
+
+  matriz.forEach((linha) => {
+    linha.forEach((numero) => {
+      if (numero >= 10 && numero <= 20) {
+        quantidade++;
+      }
+    });
+  });
+
+  document.getElementById(
+    "textExer50"
+  ).innerHTML = `Quantidade de elementos entre 10 e 20 &rarr; ${quantidade} números.`;
+  document.getElementById("textExer50").style.marginTop = "10px";
+}

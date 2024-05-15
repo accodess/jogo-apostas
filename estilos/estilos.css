@@ -447,3 +447,13 @@ input:-webkit-autofill:focus {
   margin-top: 20px;
   margin-left: 15px;
 }
+
+/* Exercício 50*/
+table {
+  width: 70%;
+}
+table,
+th,
+td {
+  border: 1px solid;
+}
