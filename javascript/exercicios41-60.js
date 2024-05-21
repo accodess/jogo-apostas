@@ -633,7 +633,6 @@ function exercicio55() {
   let numLinhas = document.getElementById("numeroLinhas-55").value;
   let numColunas = document.getElementById("numeroCol-55").value;
   let formOk = true;
-  let resultado = "";
 
   // Verificamos introdução do número
   if (isNaN(numLinhas)) {
@@ -685,8 +684,91 @@ function exercicio55a() {
   document.getElementById("numeroLinhas-55").style.borderColor = "#2b2f78";
 }
 
-// Limpar erros no número das Linhas
+// Limpar erros no número das Colunas
 function exercicio55b() {
   document.getElementById("numeroColError-55").innerHTML = " ";
   document.getElementById("numeroCol-55").style.borderColor = "#2b2f78";
+}
+
+// Exercício 56
+function exercicio56() {
+  let numLinha = document.getElementById("numeroLinha-56").value;
+  let numColuna = document.getElementById("numeroCol-56").value;
+  // numLinha = parseInt(numLinha);
+  // numColuna = parseInt(numColuna);
+  let texto = document.getElementById("texto-56").value;
+  console.log(numLinha);
+  console.log(numLinha != 0);
+  console.log(isNaN(numLinha));
+  let formOk = true;
+
+  // Verificamos introdução do número
+  if (isNaN(numLinha)) {
+    document.getElementById("numeroLinhaError-56").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Não é número, digita novamente!</span>';
+    formOk = false;
+    document.getElementById("numeroLinha-56").style.borderColor = "#d2161e";
+  }
+  if (numLinha == "") {
+    document.getElementById("numeroLinhaError-56").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número da linha!</span>';
+    formOk = false;
+    document.getElementById("numeroLinha-56").style.borderColor = "#d2161e";
+  }
+  if (numLinha < 1 || numLinha > 3) {
+    document.getElementById("numeroLinhaError-56").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número da linha entre 1 e 3!</span>';
+    formOk = false;
+    document.getElementById("numeroLinha-56").style.borderColor = "#d2161e";
+  }
+
+  if (isNaN(numColuna)) {
+    document.getElementById("numeroColError-56").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Não é número, digita novamente!</span>';
+    formOk = false;
+    document.getElementById("numeroCol-56").style.borderColor = "#d2161e";
+  }
+  if (numColuna == "") {
+    document.getElementById("numeroColError-56").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número da coluna!</span>';
+    formOk = false;
+    document.getElementById("numeroCol-56").style.borderColor = "#d2161e";
+  }
+  if (numColuna < 1 || numColuna > 3) {
+    document.getElementById("numeroColError-56").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o número da linha entre 1 e 3!</span>';
+    formOk = false;
+    document.getElementById("numeroCol-56").style.borderColor = "#d2161e";
+  }
+
+  if (texto == "") {
+    document.getElementById("textoError-56").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512" class="error-img"><g><path d="M256,512c141.385,0,256-114.615,256-256S397.385,0,256,0S0,114.615,0,256C0.153,397.322,114.678,511.847,256,512z    M234.667,128c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333v170.667   c0,11.782-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333V128z M256,384c11.782,0,21.333,9.551,21.333,21.333   s-9.551,21.333-21.333,21.333c-11.782,0-21.333-9.551-21.333-21.333S244.218,384,256,384z"/></g><span class="error-text-4"> Por favor introduza o texto!</span>';
+    formOk = false;
+    document.getElementById("texto-56").style.borderColor = "#d2161e";
+  }
+
+  if (formOk) {
+    let cellId = "cell-" + numLinha + "-" + numColuna;
+    document.getElementById(cellId).innerText = texto;
+    document.getElementById(cellId).style.padding = "10px";
+  }
+}
+
+// Limpar erros no número das Linhas
+function exercicio56a() {
+  document.getElementById("numeroLinhaError-56").innerHTML = " ";
+  document.getElementById("numeroLinha-56").style.borderColor = "#2b2f78";
+}
+
+// Limpar erros no número das Colunas
+function exercicio56b() {
+  document.getElementById("numeroColError-56").innerHTML = " ";
+  document.getElementById("numeroCol-56").style.borderColor = "#2b2f78";
+}
+
+// Limpar erros no texto
+function exercicio56c() {
+  document.getElementById("textoError-56").innerHTML = " ";
+  document.getElementById("texto-56").style.borderColor = "#2b2f78";
 }

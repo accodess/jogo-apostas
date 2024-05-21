@@ -499,6 +499,99 @@
         </button>
       </div>
       <span class="line-break"></span>
+
+      <!-- Exercício 56-->
+      <div class="exercicio">
+        <h3>Exercício 56</h3>
+        <p id="paragrafo54">
+          Crie um programa que mostre uma tabela de 3x3. O programa deve de ler
+          o número da linha, coluna e texto e mostre o texto na respetiva linha
+          e coluna da tabela.
+        </p>
+
+        <table id="tabela-56">
+          <tr>
+            <td class="cell" id="cell-1-1"></td>
+            <td class="cell" id="cell-1-2"></td>
+            <td class="cell" id="cell-1-3"></td>
+          </tr>
+          <tr>
+            <td class="cell" id="cell-2-1"></td>
+            <td class="cell" id="cell-2-2"></td>
+            <td class="cell" id="cell-2-3"></td>
+          </tr>
+          <tr>
+            <td class="cell" id="cell-3-1"></td>
+            <td class="cell" id="cell-3-2"></td>
+            <td class="cell" id="cell-3-3"></td>
+          </tr>
+        </table>
+
+        <div class="form">
+          <div class="box-numero">
+            <div>
+              <label for="numeroLinha-56"
+                >Introduza o número da linha entre 1 e 3</label
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                name="numeroLinha-56"
+                id="numeroLinha-56"
+                oninput="exercicio56a()"
+                maxlength="1"
+                min="1"
+                max="3"
+              />
+              <span class="message-error" id="numeroLinhaError-56"> </span>
+            </div>
+          </div>
+
+          <div class="box-numero">
+            <div>
+              <label for="numeroCol-56"
+                >Introduza o número da coluna entre 1 e 3</label
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                name="numeroCol-56"
+                id="numeroCol-56"
+                oninput="exercicio56b()"
+                maxlength="1"
+                min="1"
+                max="3"
+              />
+              <span class="message-error" id="numeroColError-56"> </span>
+            </div>
+          </div>
+
+          <div class="box-numero">
+            <div>
+              <label for="texto-56"
+                >Introduza o texto que pretende inserir na tabela</label
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                name="texto-56"
+                id="texto-56"
+                oninput="exercicio56c()"
+              />
+              <span class="message-error" id="textoError-56"> </span>
+            </div>
+          </div>
+        </div>
+
+        <p class="textExer" id="textExer55"></p>
+        <button type="button" class="btn-blue" onclick="exercicio56()">
+          Exercício 56
+        </button>
+      </div>
+      <span class="line-break"></span>
     </section>
 
     <footer class="footer">&copy; Alona Costa</footer>

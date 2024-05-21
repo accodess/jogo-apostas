@@ -449,22 +449,32 @@ input:-webkit-autofill:focus {
 }
 
 /* Exercício 50*/
-table {
+#matrizTabela50 {
   visibility: hidden;
   width: 70%;
 }
 table,
 th,
 td {
-  border: 1px solid;
+  border: 1px solid #2b2f78;
 }
 
 /* Exercício 55*/
 #tabela55 {
+  visibility: hidden;
   width: auto;
 }
 #tabela55 tr,
 td {
   width: 20px;
   height: 20px;
+}
+
+/* Exercício 56*/
+#tabela56,
+#tabela56 tr,
+#tabela56 td {
+  border: 1px solid #2b2f78;
+  padding: 10px;
+  text-align: center;
 }
