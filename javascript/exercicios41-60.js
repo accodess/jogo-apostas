@@ -772,3 +772,29 @@ function exercicio56c() {
   document.getElementById("textoError-56").innerHTML = " ";
   document.getElementById("texto-56").style.borderColor = "#2b2f78";
 }
+
+// Exercício 57
+window.onload = getSize;
+window.onresize = getSize;
+
+function exercicio57() {
+  document.getElementById("textExer57").innerHTML =
+    "Por favor, redimensione a janela para visualizar a mudança da altura e largura!";
+  document.getElementById("textExer57").style.marginTop = "10px";
+  document.getElementById("textExer57").style.color = "orangered";
+}
+
+function getSize() {
+  let largura =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+  let altura =
+    window.innerHeight ||
+    document.documentElement.clientHeight ||
+    document.body.clientHeight;
+
+  document.getElementById(
+    "text-57"
+  ).innerHTML = `Largura da sua janela -> ${largura} px<br> Altura da sua janela -> ${altura} px`;
+}
