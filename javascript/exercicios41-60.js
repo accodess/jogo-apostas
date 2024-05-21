@@ -802,7 +802,6 @@ function getSize() {
 // Exercício 58
 function exercicio58() {
   let arrayNumeros = [];
-  let arrayOrdenado = [];
   let textoArrayNormal = "Array normal: <br>";
   let textoArrayOrdenado = "Array ordenado com algoritmo Bubble Sort: <br>";
 
@@ -842,5 +841,44 @@ function bubbleSort(arr) {
     }
     cont--;
   } while (aux);
+  return arr;
+}
+
+// Exercício 59
+function exercicio59() {
+  let arrayNumeros = [];
+  let textoArrayNormal = "Array normal: <br>";
+  let textoArrayOrdenado = "Array ordenado com algoritmo Insertion Sort: <br>";
+
+  // Preenchemos array com números aleatórios
+  for (let i = 0; i < 100; i++) {
+    arrayNumeros.push(Math.floor(Math.random() * 100) + 1);
+  }
+
+  arrayNumeros.forEach((element) => {
+    textoArrayNormal += " " + element;
+  });
+
+  insertionSort(arrayNumeros).forEach((numero) => {
+    textoArrayOrdenado += " " + numero;
+  });
+
+  document.getElementById("text-59").innerHTML = textoArrayNormal;
+
+  document.getElementById("textExer59").innerHTML = textoArrayOrdenado;
+  document.getElementById("textExer59").style.color = "green";
+  document.getElementById("textExer59").style.marginTop = "15px";
+}
+
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let aux = arr[i];
+    let j = i - 1;
+    while (j >= 0 && arr[j] > aux) {
+      arr[j + 1] = arr[j];
+      j--;
+    }
+    arr[j + 1] = aux;
+  }
   return arr;
 }
