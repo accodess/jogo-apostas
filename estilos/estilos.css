@@ -458,3 +458,13 @@ th,
 td {
   border: 1px solid;
 }
+
+/* Exercício 55*/
+#tabela55 {
+  width: auto;
+}
+#tabela55 tr,
+td {
+  width: 20px;
+  height: 20px;
+}
