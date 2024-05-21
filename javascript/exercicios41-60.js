@@ -798,3 +798,49 @@ function getSize() {
     "text-57"
   ).innerHTML = `Largura da sua janela -> ${largura} px<br> Altura da sua janela -> ${altura} px`;
 }
+
+// Exercício 58
+function exercicio58() {
+  let arrayNumeros = [];
+  let arrayOrdenado = [];
+  let textoArrayNormal = "Array normal: <br>";
+  let textoArrayOrdenado = "Array ordenado com algoritmo Bubble Sort: <br>";
+
+  // Preenchemos array com números aleatórios
+  for (let i = 0; i < 100; i++) {
+    arrayNumeros.push(Math.floor(Math.random() * 100) + 1);
+  }
+
+  arrayNumeros.forEach((element) => {
+    textoArrayNormal += " " + element;
+  });
+
+  bubbleSort(arrayNumeros).forEach((numero) => {
+    textoArrayOrdenado += " " + numero;
+  });
+
+  document.getElementById("text-58").innerHTML = textoArrayNormal;
+
+  document.getElementById("textExer58").innerHTML = textoArrayOrdenado;
+  document.getElementById("textExer58").style.color = "green";
+  document.getElementById("textExer58").style.marginTop = "15px";
+}
+
+function bubbleSort(arr) {
+  let cont = arr.length;
+  let aux;
+
+  do {
+    aux = false;
+    for (let i = 1; i < cont; i++) {
+      if (arr[i - 1] > arr[i]) {
+        let ajudante = arr[i - 1];
+        arr[i - 1] = arr[i];
+        arr[i] = ajudante;
+        aux = true;
+      }
+    }
+    cont--;
+  } while (aux);
+  return arr;
+}
