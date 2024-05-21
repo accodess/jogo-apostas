@@ -882,3 +882,46 @@ function insertionSort(arr) {
   }
   return arr;
 }
+
+// Exercício 60
+function exercicio60() {
+  let arrayNumeros = [];
+  let textoArrayNormal = "Array normal: <br>";
+  let textoArrayOrdenado = "Array ordenado com algoritmo Selection Sort: <br>";
+
+  // Preenchemos array com números aleatórios
+  for (let i = 0; i < 100; i++) {
+    arrayNumeros.push(Math.floor(Math.random() * 100) + 1);
+  }
+
+  arrayNumeros.forEach((element) => {
+    textoArrayNormal += " " + element;
+  });
+
+  selectionSort(arrayNumeros).forEach((numero) => {
+    textoArrayOrdenado += " " + numero;
+  });
+
+  document.getElementById("text-60").innerHTML = textoArrayNormal;
+
+  document.getElementById("textExer60").innerHTML = textoArrayOrdenado;
+  document.getElementById("textExer60").style.color = "green";
+  document.getElementById("textExer60").style.marginTop = "15px";
+}
+
+function selectionSort(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    let minIndex = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[minIndex]) {
+        minIndex = j;
+      }
+    }
+    if (minIndex !== i) {
+      let temp = arr[i];
+      arr[i] = arr[minIndex];
+      arr[minIndex] = temp;
+    }
+  }
+  return arr;
+}
